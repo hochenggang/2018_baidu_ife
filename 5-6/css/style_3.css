@@ -23,7 +23,7 @@ body{
 }
 .infobar_container{
     display: block;
-
+    border-top: 2px solid rgb(139, 139, 139);
 }
 
 .resume_h2_head{
@@ -31,7 +31,6 @@ body{
     width: 10%;
     display: inline-block;
     background-color:rgb(182, 182, 182);
-    border-top: 2px solid white;
 }
 .resume_h2_body{
     display: inline-block;
