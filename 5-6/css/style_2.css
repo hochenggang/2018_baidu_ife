@@ -1,0 +1,53 @@
+/* 美化代码 */
+body{
+    background-color: grey;
+    margin: 5%;
+  }
+
+/* 功能性代码 */
+#resume_block{
+    background-color: white;
+    padding: none;
+    zoom: 1; 
+    overflow:auto;
+    height: 1000px;
+}
+#resume_head{
+    padding-top: 10px;
+    text-align: center;
+    width: 20%;
+    float: left;
+    height: 990px;
+    background-color: rgb(3, 154, 214);
+}
+#resume_head_container{
+
+
+}
+#resume_body{
+    padding-left: 5%;
+    width: 75%;
+    float: left;
+}
+.resume_h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color:white;
+}
+.resume_h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+.resume_h3 {
+    padding-right: 10px;
+    display: inline;
+    font-weight: bold;
+
+}
+.inline_p{
+    display: inline;
+    padding-right: 30px;
+}
+.block_p{
+    display: block;
+}
