@@ -1,0 +1,32 @@
+/* 美化代码 */
+body{
+    background-color: grey;
+    margin: 5%;
+}
+#resume_block{
+    background-color: white;
+    padding: 5%;
+}
+
+/* 功能性代码 */
+.resume_h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.resume_h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+.resume_h3 {
+    padding-right: 10px;
+    display: inline;
+    font-weight: bold;
+
+}
+.inline_p{
+    display: inline;
+    padding-right: 30px;
+}
+.block_p{
+    display: block;
+}
