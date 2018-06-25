@@ -1,0 +1,70 @@
+/* 美化代码 */
+body{
+    background-color: grey;
+    margin: 5%;
+  }
+
+/* 功能性代码 */
+#resume_block{
+    background-color: white;
+    margin: 0px;
+    overflow:auto;
+}
+#resume_head{
+    text-align: left;
+    width: 100%;
+    background-color: rgb(63, 63, 63);
+    float: left;
+
+}
+#resume_body{
+    width: 100%;
+    float: left;
+}
+.infobar_container{
+    display: block;
+
+}
+
+.resume_h2_head{
+    padding: 10px;
+    width: 10%;
+    display: inline-block;
+    background-color:rgb(182, 182, 182);
+    border-top: 2px solid white;
+}
+.resume_h2_body{
+    display: inline-block;
+    
+}
+
+.resume_h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+#resume_h1_01{
+    padding-left: 15px;
+}
+.resume_h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+.resume_h3 {
+    padding-right: 10px;
+    display: inline;
+    font-weight: bold;
+}
+.inline_p{
+    display: inline;
+    padding-right: 30px;
+}
+.block_p{
+    display: inline;
+}
+.p_control > p{
+    padding-right: 0px;
+}
+p{
+    font-size: 13px;
+}

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>RESUME_BASE</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
-    <link rel="stylesheet" href="css/style_2.css">
+    <link rel="stylesheet" href="css/style_3.css">
 
 </head>
 <body>
@@ -12,44 +12,88 @@
     <div id="resume_block">
         <div id="resume_head">
             <!-- 标题和内容统一用的 P 标签，用 class 来作区分 -->
-            <p class="resume_h1">简历</p>
-            
+            <p id="resume_h1_01" class="resume_h1">简历</p>
         </div>
 
         <div id="resume_body">
-            <p class="resume_h2">基本信息</p>
-            <div>
-                <!-- 需要不换行时，给 class="inline_p" 的标签对应 CSS 添加 display:inline; 使其不换行 -->
-                <p class="resume_h3">姓名</p><p class="inline_p">张三</p>
-                <p class="resume_h3">性别</p><p class="inline_p">男</p>
-                <p class="resume_h3">应聘职位</p><p class="inline_p">Web前端工程师</p>
+            <div class="infobar_container">
+                <div class="resume_h2_head">
+                    <p class="resume_h2">基本信息</p>
+                </div>
+                <div class="resume_h2_body">
+                    <div>
+                        <!-- 需要不换行时，给 class="inline_p" 的标签对应 CSS 添加 display:inline; 使其不换行 -->
+                        <p class="resume_h3">姓名</p><p class="inline_p">张三</p>
+                        <p class="resume_h3">性别</p><p class="inline_p">男</p>
+                        <p class="resume_h3">应聘职位</p><p class="inline_p">Web前端工程师</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="infobar_container">
+
+                <div class="resume_h2_head">
+                    <p class="resume_h2">联系方式</p>
+                </div>
+        
+                <div class="resume_h2_body">
+                    <div>
+                        <p class="resume_h3">手机</p><p class="inline_p">12312341234</p>
+                        <p class="resume_h3">Email</p><p class="inline_p"><a href="https://www.baidu.com">joinefe@baidu.com</a></p>
+                        <p class="resume_h3">个人主页</p><p class="inline_p"><a href="https://www.github.com">Github</a></p>
+                    </div>
+                </div>
             </div>
 
-            <p class="resume_h2">联系方式</p>
-            <div>
-                <p class="resume_h3">手机</p><p class="inline_p">12312341234</p>
-                <p class="resume_h3">Email</p><p class="inline_p"><a href="https://www.baidu.com">joinefe@baidu.com</a></p>
-                <p class="resume_h3">个人主页</p><p class="inline_p"><a href="https://www.github.com">Github</a></p>
+            <div class="infobar_container">
+                <div class="resume_h2_head">
+                    <p class="resume_h2">能力描述</p>
+                </div>
+                <div class="resume_h2_body">
+                    <div>
+                        <!-- 需要换行时，给 class="block_p" 的标签对应 CSS 添加 display:block; 使其换行 -->
+                        <div class="p_control">
+                            <p class="resume_h3">技术能力</p><p class="block_p">熟练掌握HTML,CSS,JavaScript</p>
+                        </div>
+                        <div class="p_control">
+                            <p class="resume_h3">综合能力</p><p class="block_p">良好的沟通，主动积极，努力勤奋</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <p class="resume_h2">能力描述</p>
-            <div>
-                <!-- 需要换行时，给 class="block_p" 的标签对应 CSS 添加 display:block; 使其换行 -->
-                <p class="resume_h3">技术能力</p><p class="block_p">熟练掌握HTML,CSS,JavaScript</p>
-                <p class="resume_h3">综合能力</p><p class="block_p">良好的沟通，主动积极，努力勤奋</p>
+            <div class="infobar_container"> 
+                <div class="resume_h2_head">
+                    <p class="resume_h2">教育经历</p>
+                </div>
+                <div class="resume_h2_body">
+                    <div>
+                        <div class="p_control">
+                            <p class="resume_h3">本科</p><p class="block_p">百度前端学院小薇学院</p>
+                        </div>
+                        <div class="p_control">
+                            <p class="resume_h3">研究生</p><p class="block_p">百度前端学院大斌学院</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <p class="resume_h2">教育经历</p>
-            <div>
-                <p class="resume_h3">本科</p><p class="block_p">百度前端学院小薇学院</p>
-                <p class="resume_h3">研究生</p><p class="block_p">百度前端学院大斌学院</p>
+            <div class="infobar_container">               
+                <div class="resume_h2_head">
+                    <p class="resume_h2">项目经历</p>
+                </div>
+                <div class="resume_h2_body">
+                    <div>
+                        <div class="p_control">
+                            <p class="resume_h3">小度小度</p><p class="block_p">作为前端工程师角色参与了ABC组件的开发</p>
+                        </div>
+                        <div class="p_control">
+                            <p class="resume_h3">SAN Doc</p><p class="block_p">作为文档工程师参与了SAN Doc编写</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <p class="resume_h2">项目经历</p>
-            <div>
-                <p class="resume_h3">小度小度</p><p class="block_p">作为前端工程师角色参与了ABC组件的开发</p>
-                <p class="resume_h3">SAN Doc</p><p class="block_p">作为文档工程师参与了SAN Doc编写</p>
-            </div>
         </div>
     </div>
 
