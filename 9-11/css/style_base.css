@@ -1,0 +1,178 @@
+html,body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* 开始封图布局 */
+#page-1 {
+    height: 800px;
+    background: url(https://i.loli.net/2018/06/26/5b31f3ca141be.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#page-1-text {
+    margin: 0 auto;
+    width: 700px;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#page-1-text a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 30px;
+}
+#page-1-text p {
+    font-size: 15px;
+    color: white;
+    display: block;
+    text-align: center;
+}
+#sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    margin-top: 50px;
+    padding: 50px 200px 50px 200px;
+}
+#sign-up-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#sign-up-text-headline {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+#sign-up-text-nomaltext {
+    font-size: 13px;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 100;
+    margin-top: 5px;
+}
+#sign-up-form {
+    margin-top: 20px;
+}
+#sign-up-form input[id=form-email] {
+    padding: 10px 40px 10px 40px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+#sign-up-form input[id=form-email]:-moz-placeholder,sign-up-form input[id=form-email]::-webkit-input-placeholder {
+    color: rgb(175, 175, 175);
+}
+#sign-up-form input[id=form-password] {
+    padding: 10px 40px 10px 40px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+#sign-up-form input[id=form-password]:-moz-placeholder,sign-up-form input[id=form-password]::-webkit-input-placeholder {
+    color: rgb(175, 175, 175);
+}
+#sign-up-form button[id=form-button] {
+    padding: 10px 15px 10px 15px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: 12px;
+}
+/* 封图布局结束 */
+
+/* 介绍一布局开始 */
+#introduce-01 {
+    background-color: white;
+    display: block;
+    margin: 100px 200px 100px 200px;
+}
+#introduce-01-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#introduce-01-text-smallwords{
+    font-size: 15px;
+    font-weight: 200;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+#introduce-01-text-bigwords{
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+    margin: 0px;
+    width: 600px;
+}
+
+#introduce-01-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px; 
+}
+
+#introduce-01-feature div[class=introduce-01-feature-row] {
+    display: flex;
+}
+
+#introduce-01-feature div[class=introduce-01-feature-content] {
+    display: flex;
+    padding: 20px;
+
+}
+#introduce-01-feature div[class=introduce-01-feature-content] img {
+    width: 30px;
+    height: 45px;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+#introduce-01-feature div[class=introduce-01-feature-content] p {
+    margin: 0px;
+    padding: 0px;
+}
+#introduce-01-feature div[class=introduce-01-feature-content-text-container] {
+    display: block;
+    width: 70%;
+    padding: 10px;
+}
+#introduce-01-feature div[class=introduce-01-feature-content] p[class=introduce-01-feature-headline] {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* 介绍一布局结束 */
+
+/* 二图布局开始 */
+/* 介绍二布局开始 */
+/* 介绍三布局开始 */
+/* 介绍四布局开始 */
+/* 联系布局开始 */
+/* 页脚布局开始 */
+
