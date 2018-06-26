@@ -1,0 +1,147 @@
+html,body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* 开始顶栏布局 */
+#header {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+#header_true_content {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 20px 0px ;
+}
+#logo {
+    text-align: left;
+    color: #ffffff;
+    font-size: 20px;
+    align-items: center;
+}
+#header_link {
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+#header a {
+    color: white;
+    text-decoration:none;
+}
+#header_link a {
+    padding-left: 10px; 
+}
+/* 结束顶栏布局 */
+/* 开始媒体栏布局 */
+#frame {
+    height: 350px;
+    background-color: #66bb33;
+    position:relative;
+}
+
+#frame_controler {
+    position: absolute;
+    right: 160px;
+    bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+#frame_controler a {
+    padding: 5px 8px 5px 8px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f0f08e;
+    border: 1px solid black;
+    margin: 5px;  
+}
+#frame_controler a[class=active_frame] {
+    padding-top: 15px;
+    background-color: #ffffff;
+}
+/* 媒体栏布局结束 */
+/* 开始内容主体布局 */
+#main_content {
+    position: relative;
+}
+#tag_bar {
+    position: relative;
+    border: 1px solid rgba(160, 160, 160, 0.726);
+}
+#tag_container {
+    display: flex;
+    position: relative;
+    margin-left: 18%; 
+    margin-top: 20px;
+}
+#tag_container a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 25px 10px 25px;
+    border: 1px solid rgba(160, 160, 160, 0.726);
+    border-bottom: 0;
+    border-radius: 15px 15px 0px 0px; 
+    background-color: rgb(235, 235, 235);
+}
+#tag_container a[class=active_tag] {
+    background-color: rgb(255, 255, 255);
+}
+
+#tag_contents {
+    position: relative;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+#tag_contents div {
+    margin: 0 auto;
+    width: 1000px;
+}
+#tag_contents div[class=active_content] {
+    display: flex;
+    flex-direction: column;
+}
+#tag_row_3_container{
+    display: flex;
+}
+#tag_row_3_container div[class=tag_row_3]{
+    display: flex;
+    border: 1px solid rgb(87, 87, 87);
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    margin: 5px;
+}
+#tag_row_4_container{
+    display: flex;
+}
+#tag_row_4_container div[class=tag_row_4] {
+    display: flex;
+    border: 1px solid rgb(87, 87, 87);
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    margin: 5px;
+}
+/* 内容主体布局结束 */
+/* 开始页脚布局 */
+#footer {
+    position: relative;
+    background-color: #383838;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer_info a {
+    color: white;
+    text-decoration: none;
+}
+/* 页脚布局结束 */
