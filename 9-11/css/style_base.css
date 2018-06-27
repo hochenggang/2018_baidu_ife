@@ -6,18 +6,30 @@ html,body {
 /* 开始封图布局 */
 #page-1 {
     height: 800px;
+    /*  备用 sm.ms 图床，速度慢于微博图床
     background: url(https://i.loli.net/2018/06/26/5b31f3ca141be.png);
+    */
+    background: url(https://ww1.sinaimg.cn/large/0064NqSIgy1fsov8xp5mbj318g0rix6p.jpg);
+    
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+#page-1-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.120);
 }
 #page-1-text {
     margin: 0 auto;
     width: 700px;
-    display: flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,11 +180,364 @@ html,body {
     margin-bottom: 5px;
 }
 /* 介绍一布局结束 */
-
 /* 二图布局开始 */
+#page-2 {
+    height: 800px;
+    /*  备用 sm.ms 图床，速度慢于微博图床
+    background: url(https://i.loli.net/2018/06/26/5b3233bbb5361.png);
+    */
+    background: url(http://ww3.sinaimg.cn/large/0064NqSIgy1fsovbe2kzkj318g0m8u0x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+#page-2-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.120);
+}
+#page-2-text {
+    width:55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+}
+
+#page-2-text-headline {
+    font-size: 35px;
+    color: white;
+    display: block;
+    text-align: left;
+    width: 320px;
+    margin-bottom: 20px;
+}
+#page-2-text-nomaltext {
+    font-size: 15px;
+    color: white;
+    display: block;
+    text-align: left;
+    width: 350px;
+    line-height: 150%;
+    font-weight: 100;
+    margin-top: 0px;
+}
+
+#page-2-text-button {
+    display: flex;
+    margin-top: 20px;
+}
+#page-2-text-button-01 {
+    padding: 10px 15px 10px 15px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-right: 20px;
+    
+}
+#page-2-text-button-02 {
+    padding: 10px 15px 10px 15px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: 12px;
+}
+#page-2-picture {
+    width: 45%;
+    border: 1px solid white;
+    border-radius: 20px 0px 0px 20px;
+    margin: 120px 0px 100px 120px;
+    display: flex;
+    position: relative;
+}
+#page-2-picture-right {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    margin: 50px 0px 50px 50px;
+}
+#page-2-picture-left-circle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left:20px;
+}
 /* 介绍二布局开始 */
+
+#introduce-02 {
+    background-color: white;
+    display: block;
+    margin: 100px 200px 100px 200px;
+}
+#introduce-02-headline {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+}
+#introduce-02-feature {
+    display: flex;
+    justify-content: space-between;
+}
+#introduce-02-feature div[class=introduce-02-feature-content] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    text-align: center;
+    font-weight: 100;
+}
+
+/* hr */
+hr {
+    color: rgb(243, 243, 243);
+    border: 1px solid rgb(243, 243, 243);
+}
 /* 介绍三布局开始 */
+#introduce-03 {
+    background-color: white;
+    display: block;
+    margin: 50px 200px 50px 200px;
+}
+#introduce-03 div[class=introduce-03-row] {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#introduce-03 img[class=introduce-03-row-img-left] {
+    margin: 0px 50px 50px 0px;
+    width: 65%;
+    padding: 30px;
+}
+#introduce-03 img[class=introduce-03-row-img-right] {
+    margin: 0px 0px 50px 50px;
+    width: 65%;
+    padding: 30px;
+}
+#introduce-03 div[class=introduce-03-row-text-right] {
+    padding: 30px;
+    width: 35%;
+}
+#introduce-03 div[class=introduce-03-row-text-left] {
+    padding: 30px;
+    width: 35%;
+}
+#introduce-03 p[class=introduce-03-row-text-headline] {
+    font-size: 20px;
+    font-weight: bold;
+}
+#introduce-03 p[class=introduce-03-row-text-normaltext] {
+    font-size: 15px;
+    line-height: 150%;
+}
+/* 介绍三布局结束 */
 /* 介绍四布局开始 */
+#introduce-04 {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 200px 50px 200px;
+}
+#introduce-04-headline {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+#introduce-04-normaltext {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 200;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+.introduce-01-feature-content-img-hover  {
+    position: absolute;
+    background-color: transparent; 
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.introduce-01-feature-content-img-hover:hover  {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.349); 
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#introduce-04-feature-1 {
+    display: flex;
+    margin-top: 30px;
+}
+#introduce-04-feature-2 {
+    display: flex;
+}
+#introduce-04 div[class=introduce-04-feature-content] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin: 10px;
+    position: relative;
+}
+/* 介绍四布局结束 */
 /* 联系布局开始 */
+#contact {
+    background-color: white;
+    margin: 50px 200px 50px 200px;
+}
+#contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 400px;
+    padding: 25px;
+    border-radius: 5px;
+}
+#contact-form-title {
+    font-size: 20px;
+    text-align: center; 
+}
+#contact-form input {
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid gray;
+    background-color: transparent;
+    border-radius: 5px;
+}
+#contact-form textarea {
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    height: 120px;
+    border: 1px solid gray;
+    background-color: transparent;
+    border-radius: 5px;
+}
+#contact-form-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    width: 310px;
+    height: 40px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+}
+#contact-text {
+    margin-left: 100px;
+    padding: 100px;
+}
+#contact-text-title {
+    font-size: 35px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+#contact-text-normaltext {
+    font-weight: 100;
+    font-size: 15px;
+}
+#contact-text-address {
+    display: flex;
+    flex-direction: column;
+}
+#contact-text-address {
+    display: flex;
+    flex-direction: column;
+}
+.coclassntact-text-address-row {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+}
+.contact-text-address-img {
+    width: 25px;
+    margin: 10px;
+}
+.contact-text-address-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 150%;
+    font-weight: 100;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* 联系布局结束 */
 /* 页脚布局开始 */
+#footer {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding: 30px 60px 30px 60px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-basis: 20%;
+    font-size: 12px;
+    font-weight: 100;
+}
+.footer-container a {
+    text-decoration: none;
+    color: rgb(131, 131, 131); 
+    line-height: 200%;
+}
+.footer-container-headline {
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+}
+.footer-container-nomaltext {
+    font-size: 12px;
+    font-weight: 100;
+    color: rgb(131, 131, 131); 
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer-container-icon {
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+#footer-container-icon img  {
+    width: 30px;
+    align-content: space-around
+}
+/* 页脚布局结束 */
 
