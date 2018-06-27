@@ -157,11 +157,13 @@ html,body {
 #introduce-01-feature div[class=introduce-01-feature-content] {
     display: flex;
     padding: 20px;
+    justify-content: center;
 
 }
 #introduce-01-feature div[class=introduce-01-feature-content] img {
+    align-self: flex-start;
     width: 30px;
-    height: 45px;
+    height: auto;
     padding: 10px;
     margin-top: 5px;
 
@@ -368,7 +370,7 @@ hr {
     margin: 0;
     padding: 0;
 }
-.introduce-01-feature-content-img-hover  {
+.introduce-04-feature-content-img-hover  {
     position: absolute;
     background-color: transparent; 
     top: 0px;
@@ -376,7 +378,7 @@ hr {
     width: 100%;
     height: 100%;
 }
-.introduce-01-feature-content-img-hover:hover  {
+.introduce-04-feature-content-img-hover:hover  {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.349); 
     top: 0px;
