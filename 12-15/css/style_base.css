@@ -1,0 +1,130 @@
+html,body {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+/* 竖直图标布局开始  */
+#icon-column {
+    width: 5%;
+    height: 100%;
+    background-color: #1d2531;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}
+#icon-column-app {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.icon-column-app-container-telegrame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #2b9ff6;
+}
+.icon-column-app-container-hot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #9784e4;
+}
+.icon-column-app-container-game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #ee4d31;
+}
+#icon-column-app a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+#icon-column-app img {
+    width: 30px;
+    height: 30px;
+
+}
+.icon-column-app-container-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid #2d3848;
+}
+#icon-column-operator-container-plus {
+    position: relative;
+    bottom: 3px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #2d3848;
+    text-decoration: none;
+}
+
+#icon-column-operator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.icon-column-operator-container {
+    width: 30px;
+    height: 30px;
+}
+#icon-column-operator a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+#icon-column-operator img {
+    width: 20px;
+    height: 20px;
+
+}
+/* 竖直图标布局结束     border: 1px solid green; */
+
+/* 竖直菜单布局开始  */
+#menu-column {
+    width: 15%;
+    height: 100%;
+    background-color: #222c3c;
+}
+
+
+
+
+/* 竖直菜单布局结束  */
+/* 消息布局开始  */
+#message-column {
+    
+    height: 100%;
+    background-color: #ffffff;
+}
+
+
+
+/* 消息布局结束  */

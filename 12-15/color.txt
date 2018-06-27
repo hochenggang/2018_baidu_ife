@@ -1,0 +1,13 @@
+circle-01 color="#2b9ff6"
+circle-02 color="#9784e4"
+circle-03 color="#ee4d31"
+circle-04 color="#2d3848"
+
+column-01 color="#1d2531"
+column-02 color="#222c3c"
+column-03 color="#ffffff"
+
+green-point color="#1bb934"
+
+active-message color="#00aaff"
+
