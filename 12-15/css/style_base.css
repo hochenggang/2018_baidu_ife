@@ -10,6 +10,10 @@ body {
     top: 0;
     left: 0;
 }
+.menu-column-hr {
+    margin: 0px 10px 0px 10px;
+    border: 1px solid rgba(218, 200, 200, 0.068); 
+}
 /* 竖直图标布局开始  */
 #icon-column {
     width: 5%;
@@ -89,42 +93,533 @@ body {
     margin-top: 10px;
 }
 .icon-column-operator-container {
-    width: 30px;
-    height: 30px;
-}
-#icon-column-operator a {
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
-    position: relative;
+    margin-bottom: 5px;
 }
-#icon-column-operator img {
+#icon-column-operator a {
     width: 20px;
     height: 20px;
+    text-decoration: none;
+    color: #445369;
+}
 
-}
 /* 竖直图标布局结束     border: 1px solid green; */
 
 /* 竖直菜单布局开始  */
+
 #menu-column {
     width: 15%;
     height: 100%;
     background-color: #222c3c;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    font-size: 12px;
+}
+/* row 1 */
+#menu-column-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 20px;
+}
+#menu-column-menu-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#menu-column-menu-header a {
+    text-decoration: none;
+    color: #445369;
+    margin-bottom: 10px;
+    
+}
+#menu-column-menu-header-icon {
+    width: 15px;
+    height: 15px;
+    color: #445369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu-column-menu-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+#menu-column-menu-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu-column-menu-content li {
+    display: flex;
+    color: white;
+    margin-bottom: 10px;
+    align-items: center;
 }
 
+/* row 2 */
+#menu-column-product {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#menu-column-product-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#menu-column-product-header a {
+    text-decoration: none;
+    color: #445369;
+    margin-bottom: 10px;
+}
+#menu-column-product-header-icon {
+    width: 15px;
+    height: 15px;
+    color: #445369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu-column-product-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+#menu-column-product-content-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu-column-product-content-list li {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+    align-items: center;
+}
+#menu-column-product-content-list div {
+    margin-right: 8px;
+}
 
+/* row 3 */
+#menu-column-dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#menu-column-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#menu-column-dashboard-header a {
+    text-decoration: none;
+    color: #445369;
+    margin-bottom: 10px;
+}
+#menu-column-dashboard-header-icon {
+    width: 15px;
+    height: 15px;
+    color: #445369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu-column-dashboard-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+#menu-column-dashboard-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu-column-dashboard-content li {
+    display: flex;
+    color: white;
+    margin-bottom: 10px;
+    align-items: center;
+}
 
-
+#menu-column-count {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#menu-column-count-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 5px;
+}
+#menu-column-count-bar {
+    border-radius: 2px;
+    height: 5px;
+    background-color: #445369;
+    position: relative;
+}
+#menu-column-count-bar-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right,  #9784e4, #ab50f7); 
+    border-radius: 3px;
+}
+/* 指示器 */
+.menu-column-menu-active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu-column-menu-active-indivator {
+    width: 24px;
+    height: 18px;
+    background-color: #00aaff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+.menu-column-warning-active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu-column-warning-indivator {
+    width: 18px;
+    height: 18px;
+    background-color: #ee4d31;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
 /* 竖直菜单布局结束  */
 /* 消息布局开始  */
 #message-column {
-    
     height: 100%;
+    width: 80%;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+/* 第一行布局 */
+#message-column-row1 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#message-column-row1-headline {
+    padding-left: 10px; 
+    font-size: 20px;
+}
+#message-column-row1-userinfo {
+    display: flex;
+    padding-right: 10px; 
+
+}
+#message-column-row1-userinfo-ico {
+    width: 40px;
+    height: 40px;
+    background: url(https://i.loli.net/2018/06/28/5b344b449a75a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#message-column-row1-userinfo-state {
+    width: 12px;
+    height: 12px;
+    color: green;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 3px;
+}
+#message-column-row1-userinfo-nameandpower {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+#message-column-row1-userinfo-name {
+    color: #00aaff;
+    font-size: 15px;
+}
+#message-column-row1-userinfo-power {
+    color: #8d8d8d;
+    font-size: 13px;
+}
+#message-column-row1-userinfo-operations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-size: 25px;
+    color: #8d8d8d;
 }
 
+/* 第二行布局 */
+#message-column-row2 {
+    height: 8%;
+    width: 100%;
+    display: flex;
+}
+#message-column-row2-column1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px solid rgba(160, 160, 160, 0.418);
+    border-left: 0px;; 
+    height: 100%;
+}
+#message-column-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#message-column-search-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(160, 160, 160, 0.418);
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    width: 65%;
 
+
+}
+#message-column-search-form-input {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    width: 80%;
+    color: rgba(119, 119, 119, 0.973);
+}
+#message-column-search-form-submit {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: rgba(119, 119, 119, 0.973);
+
+}
+/* 第二行第二列 */
+#message-column-row2-column2 {
+    display: flex;
+    width: 70%;
+    box-sizing: border-box;
+    border: 1px solid rgba(160, 160, 160, 0.418);
+    border-right: 0px;
+    border-left: 0px;
+    height: 100%;
+}
+#message-column-message-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 15px 8px 15px;
+}
+#message-column-message-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#message-column-message-bar-headline {
+    font-size: 15px;
+    color: black;
+}
+#message-column-message-bar-headline-indivator {
+    color: green ;
+    font-size: 10px;
+    margin-left: 5px;
+}
+#message-column-message-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: rgb(107, 107, 107);
+}
+#message-column-message-bar-right-operater1 {
+    display: flex;
+    margin-right: 20px;
+    padding: 3px;
+
+}
+#message-column-message-bar-right-operater1 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #fcfcfd;
+    width: 16px;
+    height: 16px;
+}
+#message-column-message-bar-right-operater1-left {
+    border: 1px solid grey;
+    border-radius: 3px 0px 0px 3px;
+    border-right: none;
+}
+#message-column-message-bar-right-operater1-middle {
+    border: 1px solid grey;
+}
+#message-column-message-bar-right-operater1-right {
+    border-radius: 0px 3px 3px 0px;
+    border: 1px solid grey;
+    border-left: none;
+}
+#message-column-message-bar-stripline {
+    width: 1px;
+    height: 60%;
+    border-right: 1px solid rgba(128, 128, 128, 0.404);
+}
+#message-column-message-bar-page-indivator {
+    font-size: 12px;
+    margin-left: 30px;
+}
+#message-column-message-bar-right-operater2 {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 3px;
+
+}
+#message-column-message-bar-right-operater2 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 16px;
+    height: 16px;
+    border-collapse:collapse;
+    background-color: #fcfcfd;
+}
+#message-column-message-bar-right-operater2-left {
+    border: 1px solid grey;
+    border-radius: 3px 0px 0px 3px;
+}
+#message-column-message-bar-right-operater2-right {
+    border-radius: 0px 3px 3px 0px;
+    border: 1px solid grey;
+    border-left: none;
+}
+/* 第三行布局 */
+#message-column-row3 {
+    height: 82%;
+    width: 100%;
+
+    box-sizing: border-box;
+    display: flex;
+}
+#message-column-row3-contacts {
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+#message-column-row3-contacts-overflowcontainer-main {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#message-column-row3-contacts-overflowcontainer-second {
+    position: absolute;
+    overflow-y: scroll;
+    height: 100%;
+    width: calc(100% + 20px);
+    top: 0;
+    left: 0;
+}
+.message-column-row3-members {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.411); 
+}
+
+/* 联系人列表 */
+.message-column-row3-userinfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 5px;
+    align-items: center;
+    
+}
+.message-column-row3-userinfo-c1 {
+    display: flex;
+    justify-content: left;
+}
+.message-column-row3-userinfo-ico {
+    width: 40px;
+    height: 40px;
+    background: url(https://i.loli.net/2018/06/28/5b344b449a75a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-column-row3-userinfo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-column-row3-userinfo-name {
+    color: #00aaff;
+    font-size: 15px;
+}
+
+.message-column-row3-userinfo-position {
+    color: #8d8d8d;
+    font-size: 13px;
+}
+.message-column-row3-userinfo-lasttime {
+    font-size: 12px;
+    color: grey;
+    font-weight: bold;
+}
+.message-column-row3-user-shortchat {
+    padding: 0px 20px 20px 20px;
+    font-size: 12px;
+    color: rgb(88, 88, 88);
+}
+
+#message-column-row3-chatbox {
+    width: 70%;
+    background-color: #2b9ff6;
+}
 
 /* 消息布局结束  */

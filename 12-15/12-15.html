@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>PSD-TO-HTML</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <!-- 链接到页面 CSS -->
     <link rel="stylesheet" href="css/style_base.css">
+    <!-- 链接到 fontawesome CDN -->
+    <link href="./font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">       
 </head>
 <body>
 <!-- 竖直图标布局开始 -->
@@ -16,24 +19,268 @@
        <div class="icon-column-app-container-add"><a href="#" id="icon-column-operator-container-plus">+</a></div>
    </div>
    <div id="icon-column-operator">
-        <div class="icon-column-operator-container"><a href="#"><img src="https://image.ibb.co/jvnUfT/menu_120px_logo.png"></a></div>
-        <div class="icon-column-operator-container"><a href="#"><img src="https://image.ibb.co/j9S6S8/setting_120px_logo.png"></a></div>
+        <div class="icon-column-operator-container"><a href="#" class="fa fa-th-large"></a></div>
+        <div class="icon-column-operator-container"><a href="#" class="fa fa-gear"></a></div>
    </div>
 </div>
 <!-- 竖直图标布局结束 -->
 
 <!-- 竖直菜单布局开始 -->
 <div id="menu-column">
-    <div id="menu-column-menu"></div>
-    <div id="menu-column-"></div>
-    <div id=""></div>
-    <div id=""></div>
+    <div id="menu-column-top">
+        <div id="menu-column-menu">
+            <div id="menu-column-menu-header"><a href="#">MENU</a><div id="menu-column-menu-header-icon" class="fa fa-gear"></div></div>
+            <div id="menu-column-menu-content">
+                <ul id="menu-column-menu-content-list">
+                    <li>Overview</li>
+                    <li class="menu-column-menu-active"><span>Seles</span><span class="menu-column-menu-active-indivator">54</span></li>
+                    <li>Your Staff</li>
+                    <li>Analytics & Targeting</li>
+                    <li>What's Now</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="menu-column-hr">
+        <div id="menu-column-product">
+            <div id="menu-column-product-header"><a href="#">YOUR PRODUCTS</a><div id="menu-column-product-header-icon" class="fa fa-gear"></div></div>
+            <div id="menu-column-product-content">
+                <ul id="menu-column-product-content-list">
+                    <li><div class="fa fa-book"></div>Books</li>
+                    <li><div class="fa fa-video-camera"></div>Tutorials</li>
+                    <li><div class="fa fa-photo"></div>Stocks</li>
+                    <li><div class="fa fa-bar-chart-o"></div>Infographics</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="menu-column-hr">
+        <div id="menu-column-dashboard">
+            <div id="menu-column-dashboard-header"><a href="#">DASHBOARD</a><div id="menu-column-dashboard-header-icon" class="fa fa-gear"></div></div>
+            <div id="menu-column-dashboard-content">
+                <ul id="menu-column-dashboard-content-list">
+                    <li class="menu-column-menu-active"><span>Messages</span><span class="menu-column-menu-active-indivator">21</span></li>
+                    <li>Connections</li>
+                    <li class="menu-column-warning-active"><span>Integrations</span><span class="menu-column-warning-indivator">！</span></li>
+                    <li>Account Settings</li>
+                    <li>App Settings</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="menu-column-count">
+        <div id="menu-column-count-text">
+            <div id="menu-column-count-text-goal">Monthly Goals</div>
+            <div id="menu-column-count-text-count">$580/$3200</div>
+        </div>
+        <div id="menu-column-count-bar">
+            <div id="menu-column-count-bar-active"></div>
+        </div>
+    </div>
 </div>
 <!-- 竖直菜单布局结束 -->
 
 <!-- 消息布局开始 -->
 <div id="message-column">
-   
+    <!-- 第一列 -->
+   <div id="message-column-row1">
+       <div id="message-column-row1-headline">Messages</div>
+       <div id="message-column-row1-userinfo">
+           <div id="message-column-row1-userinfo-ico">
+               <div id="message-column-row1-userinfo-state"><span class="fa fa-circle-o"></span></div>
+           </div>
+           <div id="message-column-row1-userinfo-nameandpower">
+               <span id="message-column-row1-userinfo-name">Jordan J.</span>
+               <span id="message-column-row1-userinfo-power">Administrator</span>
+           </div>
+           <div id="message-column-row1-userinfo-operations" class="fa fa-angle-down"></div>
+       </div>
+   </div>
+   <!-- 第二列 -->
+   <div id="message-column-row2">
+       <div id="message-column-row2-column1">
+           <div id="message-column-search-bar">
+               <form id="message-column-search-form">
+                    <input type="text" id="message-column-search-form-input" placeholder="Search">
+                    <button type="submit" id="message-column-search-form-submit" class="fa fa-search"></button>
+                </form>
+           </div>
+       </div>
+       <div id="message-column-row2-column2">
+            <div id="message-column-message-bar">
+                <div id="message-column-message-bar-left">
+                    <div id="message-column-message-bar-left-headline">
+                        <span>Bessie Berry</span><span class="fa fa-circle" id="message-column-message-bar-headline-indivator"></span>
+                    </div>
+                </div>
+                <div id="message-column-message-bar-right">
+                    <div id="message-column-message-bar-right-operater1">
+                        <span class="fa fa-user-plus" id="message-column-message-bar-right-operater1-left"></span>
+                        <span class="fa fa-upload" id="message-column-message-bar-right-operater1-middle"></span>
+                        <span class="fa fa-trash" id="message-column-message-bar-right-operater1-right"></span>
+                    </div>
+                    <div id="message-column-message-bar-stripline"></div>
+                    <div id="message-column-message-bar-page-indivator">1 of 28</div>
+                    <div id="message-column-message-bar-right-operater2">
+                        <span class="fa fa-angle-left" id="message-column-message-bar-right-operater2-left"></span>
+                        <span class="fa fa-angle-right" id="message-column-message-bar-right-operater2-right"></span>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+   <!-- 第三列 -->
+   <div id="message-column-row3">
+       <!-- 绝对定位+自动流溢实现固定区域内出现列表,缩小20px的宽度+二次overflow可以去除滚动条 -->
+       <!-- 联系人列表容器 -->
+       <div id="message-column-row3-contacts">
+           <!-- 第一次流溢 -->
+           <div id="message-column-row3-contacts-overflowcontainer-main"> 
+               <!-- 第二次流溢 -->
+                <div id="message-column-row3-contacts-overflowcontainer-second">
+      
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+                    <div class="message-column-row3-members">
+                        <div class="message-column-row3-userinfo">
+                            <div class="message-column-row3-userinfo-c1">
+                                <div class="message-column-row3-userinfo-ico"></div>
+                                <div class="message-column-row3-userinfo-container">
+                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-position">Administrator</span>
+                                </div>
+                            </div>
+                            <div class="message-column-row3-userinfo-lasttime">7m</div>
+                        </div>
+                        <div class="message-column-row3-user-shortchat">
+                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+       
+        <div id="message-column-row3-chatbox"></div>
+   </div>
 </div>
 <!-- 消息布局结束 -->
 </body>
