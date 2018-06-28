@@ -79,8 +79,9 @@
 <!-- 竖直菜单布局结束 -->
 
 <!-- 消息布局开始 -->
+<!-- 第三列开始 -->
 <div id="message-column">
-    <!-- 第一列 -->
+    <!-- 第三列第1行开始 -->
    <div id="message-column-row1">
        <div id="message-column-row1-headline">Messages</div>
        <div id="message-column-row1-userinfo">
@@ -94,7 +95,8 @@
            <div id="message-column-row1-userinfo-operations" class="fa fa-angle-down"></div>
        </div>
    </div>
-   <!-- 第二列 -->
+   <!-- 第三列第1行结束 -->
+   <!-- 第三列第2行开始 -->
    <div id="message-column-row2">
        <div id="message-column-row2-column1">
            <div id="message-column-search-bar">
@@ -127,7 +129,8 @@
             </div>
        </div>
    </div>
-   <!-- 第三列 -->
+   <!-- 第三列第2行结束 -->
+    <!-- 第三列第3行第1列开始 -->
    <div id="message-column-row3">
        <!-- 绝对定位+自动流溢实现固定区域内出现列表,缩小20px的宽度+二次overflow可以去除滚动条 -->
        <!-- 联系人列表容器 -->
@@ -142,14 +145,15 @@
                             <div class="message-column-row3-userinfo-c1">
                                 <div class="message-column-row3-userinfo-ico"></div>
                                 <div class="message-column-row3-userinfo-container">
-                                    <span class="message-column-row3-userinfo-name">Jordan J.</span>
+                                    <span class="message-column-row3-userinfo-name-active"><span class="fa fa-circle"></span>Jordan J.</span>
                                     <span class="message-column-row3-userinfo-position">Administrator</span>
                                 </div>
                             </div>
                             <div class="message-column-row3-userinfo-lasttime">7m</div>
                         </div>
                         <div class="message-column-row3-user-shortchat">
-                            I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.
+                            <span class="message-column-row3-user-shortchat-active-text" >I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.I am a fool boy.</span>
+                            <span class="menu-column-info-indivator">4</span>
                         </div>
                     </div>
                     <div class="message-column-row3-members">
@@ -277,9 +281,142 @@
             </div>
         </div>
 
-        
-       
-        <div id="message-column-row3-chatbox"></div>
+        <!-- 第三列第3行第2列开始 -->
+        <div id="message-column-row3-chatbox">
+            <!-- 老消息要可以滚动 -->
+            <div class="message-column-row3-chatbox-oldmessages">
+                <div class="message-column-row3-chatbox-oldmessages-foroverflow">
+                    <!-- 创建一个单条消息盒子 -->
+                    <div class="message-column-row3-chatbox-messagebox">
+                        <!-- 第一列用于呈放头像 -->
+                        <div class="message-column-row3-chatbox-messagebox-column1"></div>
+                        <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                        <div class="message-column-row3-chatbox-messagebox-column2">
+                            <div class="message-column-row3-chatbox-messagebox-column2-line1">
+                                <span class="message-column-row3-chatbox-messagebox-column2-line1-author">Jordan Steve</span>
+                                <span  class="message-column-row3-chatbox-messagebox-column2-line1-publictime">9:02 AM</span>
+                            </div>
+                            <div class="message-column-row3-chatbox-messagebox-column2-line2">
+                                <span>写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 单条消息盒子结束 -->
+                    <div class="message-column-row3-chatbox-messagebox">
+                        <!-- 第一列用于呈放头像 -->
+                        <div class="message-column-row3-chatbox-messagebox-column1"></div>
+                        <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                        <div class="message-column-row3-chatbox-messagebox-column2">
+                            <div class="message-column-row3-chatbox-messagebox-column2-line1">
+                                <span class="message-column-row3-chatbox-messagebox-column2-line1-author">Jordan Steve</span>
+                                <span  class="message-column-row3-chatbox-messagebox-column2-line1-publictime">9:02 AM</span>
+                            </div>
+                            <div class="message-column-row3-chatbox-messagebox-column2-line2">
+                                <span>写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-column-row3-chatbox-messagebox">
+                        <!-- 第一列用于呈放头像 -->
+                        <div class="message-column-row3-chatbox-messagebox-column1"></div>
+                        <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                        <div class="message-column-row3-chatbox-messagebox-column2">
+                            <div class="message-column-row3-chatbox-messagebox-column2-line1">
+                                <span class="message-column-row3-chatbox-messagebox-column2-line1-author">Jordan Steve</span>
+                                <span  class="message-column-row3-chatbox-messagebox-column2-line1-publictime">9:02 AM</span>
+                            </div>
+                            <div class="message-column-row3-chatbox-messagebox-column2-line2">
+                                <span>写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.感谢百度，THANKS IFE OF BAIDU.感谢百度，THANKS IFE OF BAIDU.感谢百度，THANKS IFE OF BAIDU.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 老消息分割线盒子 -->
+                    <div class="message-column-row3-chatbox-stripline"><div></div><span>Monday</span><div></div></div>
+                    <!-- 创建一个单条消息盒子 -->
+                    <div class="message-column-row3-chatbox-messagebox">
+                        <!-- 第一列用于呈放头像 -->
+                        <div class="message-column-row3-chatbox-messagebox-column1"></div>
+                        <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                        <div class="message-column-row3-chatbox-messagebox-column2">
+                            <div class="message-column-row3-chatbox-messagebox-column2-line1">
+                                <span class="message-column-row3-chatbox-messagebox-column2-line1-author">Jordan Steve</span>
+                                <span  class="message-column-row3-chatbox-messagebox-column2-line1-publictime">9:02 AM</span>
+                            </div>
+                            <div class="message-column-row3-chatbox-messagebox-column2-line2">
+                                <span>写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 单条消息盒子结束 -->
+                    <!-- 老消息分割线盒子 -->
+                    <div class="message-column-row3-chatbox-stripline"><div></div><span>Tuesday</span><div></div></div>
+                    <!-- 创建一个单条消息盒子 -->
+                    <div class="message-column-row3-chatbox-messagebox">
+                        <!-- 第一列用于呈放头像 -->
+                        <div class="message-column-row3-chatbox-messagebox-column1"></div>
+                        <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                        <div class="message-column-row3-chatbox-messagebox-column2">
+                            <div class="message-column-row3-chatbox-messagebox-column2-line1">
+                                <span class="message-column-row3-chatbox-messagebox-column2-line1-author">Jordan Steve</span>
+                                <span  class="message-column-row3-chatbox-messagebox-column2-line1-publictime">9:02 AM</span>
+                            </div>
+                            <div class="message-column-row3-chatbox-messagebox-column2-line2">
+                                <span>写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 单条消息盒子结束 -->
+                    <!-- 创建一个单条消息盒子 -->
+                    <div class="message-column-row3-chatbox-messagebox">
+                        <!-- 第一列用于呈放头像 -->
+                        <div class="message-column-row3-chatbox-messagebox-column1"></div>
+                        <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                        <div class="message-column-row3-chatbox-messagebox-column2">
+                            <div class="message-column-row3-chatbox-messagebox-column2-line1">
+                                <span class="message-column-row3-chatbox-messagebox-column2-line1-author">Jordan Steve</span>
+                                <span  class="message-column-row3-chatbox-messagebox-column2-line1-publictime">9:02 AM</span>
+                            </div>
+                            <div class="message-column-row3-chatbox-messagebox-column2-line2">
+                                <span>写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 单条消息盒子结束 -->
+                </div>
+            </div>
+           
+                <!-- 新消息没啥注意的 -->
+            
+                <div class="message-column-row3-chatbox-newmessages">
+                <!-- 创建一个单条消息盒子 -->
+                <div class="message-column-row3-chatbox-messagebox">
+                    <!-- 第一列用于呈放头像 -->
+                    <div class="message-column-row3-chatbox-messagebox-column1"></div>
+                    <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                    <div class="message-column-row3-chatbox-messagebox-column2">
+                        <div class="message-column-row3-chatbox-messagebox-column2-line1">
+                            <span class="message-column-row3-chatbox-messagebox-column2-line1-author">Jordan Steve</span>
+                            <span  class="message-column-row3-chatbox-messagebox-column2-line1-publictime">9:02 AM</span>
+                        </div>
+                        <div class="message-column-row3-chatbox-messagebox-column2-line2">
+                            <span>写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.写这个作业已经写了一天半了，一个字母一个字母的敲，虽然累，但也收获不少。感谢百度，THANKS IFE OF BAIDU.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 单条消息盒子结束 -->
+            </div>
+            <!-- 发送框要 fixed 固定位置 -->
+            <div class="message-column-row3-chatbox-sendbar">
+                    <form id="message-column-row3-chatbox-sendbar-form">
+                            <button type="submit" id="message-column-row3-chatbox-sendbar-form-submit">+</button>
+                            <input id="message-column-row3-chatbox-sendbar-form-input" placeholder="   Well,now we can begin to..." type="text">
+                    </form>
+            </div>
+            
+            <!-- 新消息分割线盒子 -->
+            <div class="message-column-row3-chatbox-stripline-active"><div></div><span>New Messages</span><div></div></div>
+
+        </div>
    </div>
 </div>
 <!-- 消息布局结束 -->
