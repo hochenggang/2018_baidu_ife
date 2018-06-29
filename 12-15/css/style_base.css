@@ -544,6 +544,9 @@ body {
     width: 30%;
     height: 100%;
     position: relative;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+    border-right: 1px solid rgba(179, 179, 179, 0.411);
 
 }
 #message-column-row3-contacts-overflowcontainer-main {
@@ -567,6 +570,14 @@ body {
     flex-direction: column;
     width: 100%;
     border-bottom: 1px solid rgba(179, 179, 179, 0.411); 
+}
+.message-column-row3-members-active {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.411); 
+    border-left: 3px solid #00aaff;
 }
 
 /* 联系人列表 */
@@ -653,8 +664,6 @@ body {
 
 /* 第三列第三行  */
 #message-column-row3-chatbox {
-    box-sizing: border-box;
-    border-left: 1px solid rgba(179, 179, 179, 0.411);
     width: 70%;
     height: 100%;
     display: flex;
