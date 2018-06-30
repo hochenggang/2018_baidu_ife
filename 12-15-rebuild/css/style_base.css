@@ -1,4 +1,4 @@
-/* 主容器布局开始 , main-box  */
+/* 主容器 */
 #main-box {
     display: flex;
     position: fixed; /* 基于 html 绝对定位，用于生成一个填充整个屏幕的盒子 */
@@ -7,28 +7,616 @@
     width: 100%;
     height: 100%;
     background-color: rgb(255, 191, 202);
-
 }
 
-/* 功能容器布局开始 , func */
+/* 功能容器 */
 #func {
     display: flex;
-    width: 100px;
-    height: 100%;
-    background-color: rgb(255, 236, 212);
+    flex-direction: column; /* 对功能容器内的子项使用纵向 flex */
+    justify-content: space-between; /* 使纵向上的元素两端排列，即功能内的图标向顶部靠拢，操作器向底部靠拢 */
+    align-items: center; /* 使横向上的元素居中 */
+    flex-shrink: 0; /* 禁止 flex 的缩放弹性 */
+    width: 80px; /* 固定高度，缩放不变窄 */
+    height: 100%; /* 高度自适应 */
+    background-color: #1d2531;
+    z-index: 3; /* Z轴层级用于遮住活动指示器，形成半圆 */
 }
-/* 功能容器布局开始 , menu */
+/* 功能子项容器 */
+.func-item-all {
+    flex-direction: column; 
+    align-items: center;
+}
+/* 功能子项*/
+.func-item,.func-item-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+.func-item-add {
+    box-sizing: border-box;
+    border: 4px solid #2d3848;
+    color: #2d3848;
+    font-size: 20px;
+    font-weight: 100;
+}
+/* 功能子项图标*/
+.func-item-icon {
+    width: 30px;
+    height: 30px;
+}
+#icon-color-1 {
+    background-color: #2b9ff6;
+}
+#icon-color-2 {
+    background-color: #9784e4;
+}
+#icon-color-3 {
+    background-color: #ee4d31;
+}
+/* 功能区操作器*/
+#func-operater-all i {
+    margin: 0px 3px 10px 3px;
+    color: #546783;
+    font-size: 20px;
+}
+/* 当前活跃功能指示器*/
+.func-item {
+    position: relative; /* 为活跃功能指示器的绝对位置做准备*/
+}
+.func-active-indicator {
+    position: absolute; /* 基于功能图标做绝对定位，形成一个2*2的小圆点 */
+    border-radius: 50%;
+    top: 50%;
+    left: -17px;
+    width: 4px;
+    height: 4px;
+    background-color: #2b9ff6;
+}
+
+
+/* 菜单容器布局开始 */
+/* 菜单布局和功能布局相似，不再注释*/
 #menu {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
     width: 250px;
     height: 100%;
-    background-color: rgb(214, 255, 231);
+    background-color: #222c3c;
+    z-index: 2;
 }
-/* 功能容器布局开始 , panel */
-#panel {
-    flex: 1;
+#menu-item-all {
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu-item-header a {
+    text-decoration: none;
+    color: #445369;
+    margin-bottom: 10px;
+}
+.menu-item-header i {
+    width: 15px;
+    height: 15px;
+    color: #445369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.menu-item-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-item-content li {
+    display: flex;
+    list-style: none;
+    color: rgb(206, 206, 206);
+    margin: 5px 0px 5px 0px;
+    align-items: center;
+}
+.menu-item-count {
+    justify-content: space-between;
+}
+.menu-with-pic i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+.menu-item-count-indivator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 18px;
+    background-color: #00aaff;
+    border-radius: 10px;
+    font-size: 10px;
+}
+/* 活跃菜单指示器 */
+.menu-active {
+    position: relative;
+    justify-content: space-between;
+}
+.menu-active-indicator {
+    position: absolute; /* 基于功能图标做绝对定位，形成一个2*2的小圆点 */
+    border-radius: 50%;
+    top: 50%;
+    left: -22px;
+    width: 4px;
+    height: 4px;
+    background-color: #2b9ff6;
+}
+.menu-item-warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    background-color: #ee4d31;
+    border-radius: 10px;
+    font-size: 10px;
+}
+/* 菜单区月度目标*/
+#menu-mouthgoal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 12px;
+}
+#menu-mouthgoal-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 5px;
+}
+#menu-mouthgoal-bar {
+    border-radius: 2px;
+    height: 5px;
+    background-color: #445369;
+    position: relative;
+}
+#menu-mouthgoal-bar-active {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    background-color: rgb(170, 217, 255);
+    width: 20%;
+    background: linear-gradient(to right,  #9784e4, #ab50f7); 
+    border-radius: 3px;
+}
+
+
+/* 面板容器布局开始 */
+#panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 面板栏占据剩余空间的全部，以达到自适应 */
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+/* 面板头部 */
+#panel-header {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#panel-header-headline {
+    padding-left: 15px; 
+    font-size: 20px; 
+}
+#panel-header-userinfo {
+    display: flex;
+    align-items: center;
+    padding-right: 15px; 
+}
+#panel-header-userinfo-ico {
+    width: 40px;
+    height: 40px;
+    background: url(https://i.loli.net/2018/06/28/5b344b449a75a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+    border-radius: 50%;
+}
+
+#panel-header-userinfo-state {
+    width: 12px;
+    height: 12px;
+    color: green;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 3px;
+}
+#panel-header-userinfo-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+#panel-header-userinfo-name {
+    color: #00aaff;
+    font-size: 15px;
+}
+#panel-header-userinfo-discript {
+    color: #8d8d8d;
+    font-size: 13px;
+}
+#panel-header-userinfo-operations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-size: 25px;
+    color: #8d8d8d;
+}
+/* 面板功能区 */
+#panel-func {
+    height: 7%;
+    width: 100%;
+    display: flex;
+
+}
+#panel-func-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px solid rgba(160, 160, 160, 0.568);
+    min-width: 250px;
+}
+#panel-func-search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgba(160, 160, 160, 0.568);
+    padding: 7px;
+    width: 80%;
+
+}
+#panel-func-search-form-button,#panel-func-search-form-input {
+    border: 0;
+    padding: 0;
+    margin: 0px 5px 0px 5px;
+    background: transparent;
+    color: rgba(126, 126, 126, 0.418);
+}
+
+#panel-func-funcbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    box-sizing: border-box;
+    border: 1px solid rgba(160, 160, 160, 0.418);   
+    min-width: 250px;
+}
+#panel-func-funcbox-name {
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(70, 70, 70);
+    margin-left: 5px;
+    min-width: 100px;
+}
+#panel-func-funcbox-name i {
+    color: rgb(0, 158, 0);
+    font-size: 7px;
+}
+#panel-func-funcbox-operator {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#panel-func-funcbox-operator-funcgroup {
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.404);
+    display: flex;
+    justify-content: center;
+    margin: 0px 15px 0px 15px;
+    color: rgb(70, 70, 70);
+}
+#panel-func-funcbox-operator-funcgroup i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+}
+#panel-func-funcbox-operator-pagegroup {
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.404);
+    display: flex;
+    justify-content: center;
+    margin: 0px 15px 0px 5px;
+}
+#panel-func-funcbox-operator-pagegroup i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+}
+.panel-func-funcbox-stripline{
+    width: 1px;
+    height: 60%;
+    border-right: 1px solid rgba(128, 128, 128, 0.404);
+}
+.stripline-full-hight{
+    width: 1px;
+    border-right: 1px solid rgba(128, 128, 128, 0.404);
+}
+#panel-func-funcbox-page-indivator {
+    margin: 0px 0px 0px 15px;
+    font-size: 10px;
+    color: rgb(70, 70, 70);
+    min-width: 50px;
+}
+/* 面板聊天框 */
+#panel-body {
+    display: flex;
+    width: 100%;
+    height: 83%;
+}
+
+#panel-body-friendslist,#panel-body-chatbox {
+    position: relative;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+    height: 100%;
+    min-width: 250px;
+}
+
+/* 联系人列表 */
+#panel-body-friendslist {
+    display: flex;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(179, 179, 179, 0.411);
+    width: 30%;
+}
+#panel-body-friendslist-overflowbox {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#panel-body-friendslist-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow-y: scroll;
+    height: 100%;
+    width: calc(100% + 20px);
+    top: 0;
+    left: 0;
+}
+.panel-friend-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.411); 
+}
+.panel-friend-item-userinfo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    align-items: center;
+    padding: 15px 15px 10px 15px;
+}
+.panel-friend-item-userinfo-mainbox {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.panel-friend-item-userinfo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.panel-friend-item-userinfo-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.panel-friend-item-userinfo-name,.panel-friend-item-userinfo-name i {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(94, 94, 94, 0.678); 
+    font-weight: bold;
+}
+#panel-friend-item-active {
+    box-sizing: border-box;
+    border-left: 4px solid #00aaff;
+}
+#panel-friend-item-active span {
+    color: #00aaff;
+}
+.panel-friend-item-userinfo-name i {
+    color: #00aaff;
+    font-size: 6px;
+    margin-right: 5px; 
+}
+.panel-friend-item-userinfo-detail {
+    color: #8d8d8d;
+    font-size: 13px;
+}
+.panel-friend-item-userinfo-lasttime {
+    font-size: 12px;
+    color: rgba(94, 94, 94, 0.678); 
+}
+.panel-friend-item-abstract {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 20px 20px;
+    font-size: 12px;
+    color: rgb(88, 88, 88);
+}
+/* 聊天框 */
+#panel-body-chatbox {
+    display: flex;
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-left: 1px solid rgba(179, 179, 179, 0.411);
+    width: 70%;
+}
+/* 设置流溢盒子 */
+#panel-body-chatbox-oldmessages-overflowbox {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+}
+#panel-body-chatbox-oldmessages-container {
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: calc(100% + 20px);
+    top: 0;
+    left: 0;
+}
+.panel-body-message-item{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: 10px;
+}
+.panel-body-message-item-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+.panel-body-message-item-content {
+    margin-left: 12px;
+    min-width: 100px;
+    font-size: 12px;
+}
+.panel-body-message-item-content-header-author {
+    color: #41414196;
+    font-size: 13px;
+    margin-right: 5px;
+}
+.panel-body-message-item-content-header-publictime {
+    color: #41414196;
+    font-size: 10x;
+}
+.panel-body-message-item-content-body {
+    width: 90%;
+}
+.panel-body-chatbox-stripline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgba(179, 179, 179, 0.411);
+}
+.panel-body-chatbox-stripline-active {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #00aaff;
+}
+.panel-body-chatbox-stripline div {
+    height: 1px;
+    border-top: 1px solid rgba(179, 179, 179, 0.411);
+    width: 45%;
+}
+.panel-body-chatbox-stripline-active div {
+    height: 1px;
+    border-top: 1px solid #00aaff;
+    width: 40%;
+}
+#message-column-row3-chatbox-sendbar {
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    bottom: 1%;
+    left: 0;
+}
+#message-column-row3-chatbox-sendbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#message-column-row3-chatbox-sendbar-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 7px;
+    height: auto;
+    width: 80%;
+}
+#message-column-row3-chatbox-sendbar-form-button {
+    border: 0;
+    padding: 0;
+    color: rgba(126, 126, 126, 0.418);
+    box-sizing: border-box;
+    border: 2px solid rgba(187, 187, 187, 0.568);
+    border-right: 0;
+    border-radius: 5px 0px 0px 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #fdfdfe;
+    font-size: 15px;
+
+}
+#message-column-row3-chatbox-sendbar-form-input {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: rgba(126, 126, 126, 0.418);
+    box-sizing: border-box;
+    border: 2px solid rgba(187, 187, 187, 0.568);
+    border-radius: 0px 5px 5px 0px;
+    padding-left: 10px;
+    height: 40px;
+    width: 90%
 }

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <title>12-15-rebuild</title>
+    <title>12-15-Rebuild</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
     <!-- 链接到页面 CSS -->
     <link rel="stylesheet" href="css/style_base.css">
@@ -13,11 +13,407 @@
 <!-- 主容器，用于撑满整个页面。采用绝对布局，宽高基于 html标签均为100% -->
 <div id="main-box">
     <!-- 定义一个 function 盒子，用于盛放所有功能 -->
-    <div id="func"></div>
+    <div id="func">
+        <div id="func-item-all">
+            <!-- 定义一个 function 子项盒子，用于盛放单个功能 -->
+            <div class="func-item" id="icon-color-1" >
+                <!-- 定义一个 img，用于盛放图标 -->
+                <img class="func-item-icon" src="https://image.ibb.co/fjNHZo/plane_120px.png">
+                <!-- 定义一个 div，用于盛放活跃指示器 -->
+                <div class="func-active-indicator"></div>
+            </div>
+            <div class="func-item" id="icon-color-2">
+                <img class="func-item-icon" src="https://image.ibb.co/dFvAn8/rocket_120px.png">
+            </div>
+            <div class="func-item" id="icon-color-3">
+                <img class="func-item-icon" src="https://image.ibb.co/jzLbS8/game_120px.png">
+            </div>
+            <!-- 定义一个 function-add 子项盒子，用于盛放功能添加选项 -->
+            <div class="func-item-add">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+        </div>
+        <!-- 定义一个 function 子项盒子，用于盛放单个功能 -->
+        <div id="func-operater-all">
+            <i class="fa fa-th-large" aria-hidden="true"></i>
+            <i class="fa fa-gear" aria-hidden="true"></i>
+        </div>
+    </div>
+
     <!-- 定义一个 menu 盒子，用于盛放某一功能的菜单 -->
-    <div id="menu"></div>
+    <div id="menu">
+        <!-- 定义一个所有菜单的盒子 -->
+        <div id="menu-item-all">
+            <!-- 定义一个菜单详情的盒子 -->
+            <div class="menu-item"> 
+                <div class="menu-item-header">
+                    <a href="#">MENU</a>
+                    <i class="fa fa-gear"></i>
+                </div>
+                <ul class="menu-item-content">
+                    <li>Overview</li>
+                    <li class="menu-item-count">Seles
+                        <span class="menu-item-count-indivator">54</span>
+                    </li>
+                    <li>Your Staff</li>
+                    <li>Analytics &amp; Targeting</li>
+                    <li>What's Now</li>
+                </ul>
+            </div>
+            <div class="menu-item"> 
+                <div class="menu-item-header">
+                    <a href="#">YOUR PRODUCTS</a>
+                    <i class="fa fa-gear"></i>
+                </div>
+                <ul class="menu-item-content">
+                    <li class="menu-with-pic"><i class="fa fa-book"></i>Books</li>
+                    <li class="menu-with-pic"><i class="fa fa-video-camera"></i>Tutorials</li>
+                    <li class="menu-with-pic"><i class="fa fa-photo"></i>Stocks</li>
+                    <li class="menu-with-pic"><i class="fa fa-bar-chart-o"></i>Infographics</li>
+                </ul>
+            </div>
+            <div class="menu-item"> 
+                <div class="menu-item-header">
+                    <a href="#">DASHBOARD</a>
+                    <i class="fa fa-gear"></i>
+                </div>
+                <ul class="menu-item-content">
+                    <li class="menu-active">Messages
+                        <span class="menu-item-count-indivator">21</span>
+                        <div class="menu-active-indicator"></div>
+                    </li>
+                    <li class="menu-item-count">Connections</li>
+                    <li class="menu-item-count">Integrations
+                        <span class="menu-item-warning">!</span>
+                    </li>
+                    <li>Account Settings</li>
+                    <li>App Settings</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 定义一个月度目标的盒子 -->
+        <div id="menu-mouthgoal">
+            <div id="menu-mouthgoal-text">
+                <div id="menu-mouthgoal-text-goal">Monthly Goals</div>
+                <div id="menu-mouthgoal-text-count">$580/$3200</div>
+            </div>
+            <div id="menu-mouthgoal-bar">
+                <div id="menu-mouthgoal-bar-active"></div>
+            </div>
+        </div>
+   
+    </div>
+
     <!-- 定义一个 panel 盒子，用于盛放某一功能对于某一级菜单的展开面板 -->
-    <div id="panel"></div>
-</div>
+    <div id="panel">
+        <!-- 面板头部 -->
+        <div id="panel-header">
+            <div id="panel-header-headline">Messages</div>
+            <div id="panel-header-userinfo">
+                <div id="panel-header-userinfo-ico">
+                    <div id="panel-header-userinfo-state"><span class="fa fa-circle-o"></span></div>
+                </div>
+                <div id="panel-header-userinfo-detail">
+                    <span id="panel-header-userinfo-name">Jordan J.</span>
+                    <span id="panel-header-userinfo-discript">Administrator</span>
+                </div>
+                <div id="panel-header-userinfo-operations" class="fa fa-angle-down"></div>
+            </div>
+        </div>
+
+        <!-- 面板功能区 -->
+        <div id="panel-func">
+            <div id="panel-func-search">
+                <form id="panel-func-search-form">
+                    <input id="panel-func-search-form-input" placeholder="Search" type="text">
+                    <button type="submit" id="panel-func-search-form-button" class="fa fa-search"></button>
+                </form>
+            </div>
+
+            <div id="panel-func-funcbox">
+                <div id="panel-func-funcbox-name">
+                    <span>Bessie Berry</span>
+                    <i class="fa fa-circle"></i>
+                </div>
+                <div id="panel-func-funcbox-operator">
+                    <div id="panel-func-funcbox-operator-funcgroup">
+                        <i class="fa fa-user-plus"></i>
+                        <div class="stripline-full-hight"></div>
+                        <i class="fa fa-upload"></i>
+                        <div class="stripline-full-hight"></div>
+                        <i class="fa fa-trash"></i>
+                    </div>
+                    <div class="panel-func-funcbox-stripline"></div>
+                    <div id="panel-func-funcbox-page-indivator"> 1 of 28</div>
+                    <div id="panel-func-funcbox-operator-pagegroup">
+                        <i class="fa fa-angle-left"></i>
+                        <div class="stripline-full-hight"></div>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 面板聊天框 -->
+        <div id="panel-body">
+            <!-- 绝对定位+自动流溢实现固定区域内出现列表,缩小20px的宽度+二次overflow可以去除滚动条 -->
+            <!-- 联系人列表容器 -->
+            <div id="panel-body-friendslist">
+                <!-- 第一次流溢 -->
+                <div id="panel-body-friendslist-overflowbox"> 
+                    <!-- 第二次流溢 -->
+                    <div id="panel-body-friendslist-container">
+            
+                        <div class="panel-friend-item" id="panel-friend-item-active">
+                            <div class="panel-friend-item-userinfo">
+                                <div class="panel-friend-item-userinfo-mainbox">
+                                    <img class="panel-friend-item-userinfo-icon" src="https://i.loli.net/2018/06/28/5b34ccb3e6f83.jpg">
+                                    <div class="panel-friend-item-userinfo-container">
+                                        <div class="panel-friend-item-userinfo-name">
+                                            <i class="fa fa-circle"></i>
+                                            <span>Jordan J.</span>
+                                        </div>
+                                        <div class="panel-friend-item-userinfo-detail">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="panel-friend-item-userinfo-lasttime">7m</div>
+                            </div>
+                            <div class="panel-friend-item-abstract">
+                                I am a fool boy.I am a fool boy..
+                            </div>
+                        </div>
+
+                        <div class="panel-friend-item">
+                            <div class="panel-friend-item-userinfo">
+                                <div class="panel-friend-item-userinfo-mainbox">
+                                    <img class="panel-friend-item-userinfo-icon" src="https://i.loli.net/2018/06/28/5b34ccb3e6f83.jpg">
+                                    <div class="panel-friend-item-userinfo-container">
+                                        <div class="panel-friend-item-userinfo-name">
+                                            <span>Jordan J.</span>
+                                        </div>
+                                        <div class="panel-friend-item-userinfo-detail">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="panel-friend-item-userinfo-lasttime">7m</div>
+                            </div>
+                            <div class="panel-friend-item-abstract">
+                                I am a fool boy.I am a fool boy..
+                            </div>
+                        </div>
+                        <div class="panel-friend-item">
+                            <div class="panel-friend-item-userinfo">
+                                <div class="panel-friend-item-userinfo-mainbox">
+                                    <img class="panel-friend-item-userinfo-icon" src="https://i.loli.net/2018/06/28/5b34ccb3e6f83.jpg">
+                                    <div class="panel-friend-item-userinfo-container">
+                                        <div class="panel-friend-item-userinfo-name">
+                                            <span>Jordan J.</span>
+                                        </div>
+                                        <div class="panel-friend-item-userinfo-detail">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="panel-friend-item-userinfo-lasttime">7m</div>
+                            </div>
+                            <div class="panel-friend-item-abstract">
+                                I am a fool boy.I am a fool boy..
+                            </div>
+                        </div>
+                        <div class="panel-friend-item">
+                            <div class="panel-friend-item-userinfo">
+                                <div class="panel-friend-item-userinfo-mainbox">
+                                    <img class="panel-friend-item-userinfo-icon" src="https://i.loli.net/2018/06/28/5b34ccb3e6f83.jpg">
+                                    <div class="panel-friend-item-userinfo-container">
+                                        <div class="panel-friend-item-userinfo-name">
+                                            <span>Jordan J.</span>
+                                        </div>
+                                        <div class="panel-friend-item-userinfo-detail">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="panel-friend-item-userinfo-lasttime">7m</div>
+                            </div>
+                            <div class="panel-friend-item-abstract">
+                                I am a fool boy.I am a fool boy..
+                            </div>
+                        </div>
+                        <div class="panel-friend-item">
+                            <div class="panel-friend-item-userinfo">
+                                <div class="panel-friend-item-userinfo-mainbox">
+                                    <img class="panel-friend-item-userinfo-icon" src="https://i.loli.net/2018/06/28/5b34ccb3e6f83.jpg">
+                                    <div class="panel-friend-item-userinfo-container">
+                                        <div class="panel-friend-item-userinfo-name">
+                                            <span>Jordan J.</span>
+                                        </div>
+                                        <div class="panel-friend-item-userinfo-detail">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="panel-friend-item-userinfo-lasttime">7m</div>
+                            </div>
+                            <div class="panel-friend-item-abstract">
+                                I am a fool boy.I am a fool boy..
+                            </div>
+                        </div>
+                        <div class="panel-friend-item">
+                            <div class="panel-friend-item-userinfo">
+                                <div class="panel-friend-item-userinfo-mainbox">
+                                    <img class="panel-friend-item-userinfo-icon" src="https://i.loli.net/2018/06/28/5b34ccb3e6f83.jpg">
+                                    <div class="panel-friend-item-userinfo-container">
+                                        <div class="panel-friend-item-userinfo-name">
+                                            <span>Jordan J.</span>
+                                        </div>
+                                        <div class="panel-friend-item-userinfo-detail">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="panel-friend-item-userinfo-lasttime">7m</div>
+                            </div>
+                            <div class="panel-friend-item-abstract">
+                                I am a fool boy.I am a fool boy..
+                            </div>
+                        </div>
+                        <div class="panel-friend-item">
+                            <div class="panel-friend-item-userinfo">
+                                <div class="panel-friend-item-userinfo-mainbox">
+                                    <img class="panel-friend-item-userinfo-icon" src="https://i.loli.net/2018/06/28/5b34ccb3e6f83.jpg">
+                                    <div class="panel-friend-item-userinfo-container">
+                                        <div class="panel-friend-item-userinfo-name">
+                                            <span>Jordan J.</span>
+                                        </div>
+                                        <div class="panel-friend-item-userinfo-detail">Administrator</div>
+                                    </div>
+                                </div>
+                                <div class="panel-friend-item-userinfo-lasttime">7m</div>
+                            </div>
+                            <div class="panel-friend-item-abstract">
+                                I am a fool boy.I am a fool boy..
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="panel-body-chatbox">
+                <!-- 老消息 -->
+                <div id="panel-body-chatbox-oldmessages-overflowbox">
+                    <div id="panel-body-chatbox-oldmessages-container">
+                        <!-- 创建一个单条消息盒子 -->
+                        <div class="panel-body-message-item">
+                            <!-- 第一列用于呈放头像 -->
+                            <img class="panel-body-message-item-icon" src="https://i.loli.net/2018/06/28/5b34ccb41bdf2.jpg">
+                            <!-- 第二列分两行，一为作者加时间，二为消息内容 -->
+                            <div class="panel-body-message-item-content">
+                                <div class="panel-body-message-item-content-header">
+                                    <span class="panel-body-message-item-content-header-author">Jordan Steve</span>
+                                    <span class="panel-body-message-item-content-header-publictime">9:02 AM</span>
+                                </div>
+                                <div class="panel-body-message-item-content-body">
+                                    <span>
+                                        故事起始于贾敏病逝，贾母怜惜黛玉无依傍，又多病，于是接到贾府抚养。黛玉小贾宝玉一岁。后又有王夫人外甥女薛宝钗也到贾府，大贾宝玉二岁，长得端方美丽。贾宝玉在孩提之间，性格纯朴，深爱二人无偏心，黛玉便有些醋意，宝钗却浑然不觉。贾宝玉与黛玉同在贾母房中坐卧，所以比别的姊妹略熟惯些。
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body-message-item">
+                            <img class="panel-body-message-item-icon" src="https://i.loli.net/2018/06/30/5b373450333a8.jpg">
+                            <div class="panel-body-message-item-content">
+                                <div class="panel-body-message-item-content-header">
+                                    <span class="panel-body-message-item-content-header-author">Steve Jobs</span>
+                                    <span class="panel-body-message-item-content-header-publictime">9:03 AM</span>
+                                </div>
+                                <div class="panel-body-message-item-content-body">
+                                    <span>
+                                        一天，贾宝玉在秦可卿卧房午睡，梦入太虚幻境，遇警幻仙子，阅金陵十二钗正册、副册、又副册判词，有图有诗，只是不解其意。警幻命仙女演奏新制《红楼梦》套曲十四支，其收尾一支名《飞鸟各投林》，词云“落了片白茫茫大地真干净”。然而贾宝玉仍不解，警幻仙子表明自己受宁荣二公所嘱托，劝宝玉留意于孔孟之间，委身于经济之道。为此警幻特将妹妹可卿许配与他，为的是让宝玉略领天界仙闺以后不再沉醉于尘世女儿们之间，宝玉同可卿正难分难解，惚入迷津而惊醒。
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分割线 -->
+                        <div class="panel-body-chatbox-stripline"><div></div><span>Tuesday</span><div></div></div>
+
+                        <div class="panel-body-message-item">
+                            <img class="panel-body-message-item-icon" src="https://i.loli.net/2018/06/28/5b34ccb41bdf2.jpg">
+                            <div class="panel-body-message-item-content">
+                                <div class="panel-body-message-item-content-header">
+                                    <span class="panel-body-message-item-content-header-author">Jordan Steve</span>
+                                    <span class="panel-body-message-item-content-header-publictime">10:00 AM</span>
+                                </div>
+                                <div class="panel-body-message-item-content-body">
+                                    <span>
+                                         现在几点了？
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body-message-item">
+                            <img class="panel-body-message-item-icon" src="https://i.loli.net/2018/06/30/5b373450333a8.jpg">
+                            <div class="panel-body-message-item-content">
+                                <div class="panel-body-message-item-content-header">
+                                    <span class="panel-body-message-item-content-header-author">Steve Jobs</span>
+                                    <span class="panel-body-message-item-content-header-publictime">11:03 PM</span>
+                                </div>
+                                <div class="panel-body-message-item-content-body">
+                                    <span>
+                                        晚上 11 点了呢。
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body-chatbox-stripline"><div></div><span>Sunday</span><div></div></div>
+                        <div class="panel-body-message-item">
+                            <img class="panel-body-message-item-icon" src="https://i.loli.net/2018/06/28/5b34ccb41bdf2.jpg">
+                            <div class="panel-body-message-item-content">
+                                <div class="panel-body-message-item-content-header">
+                                    <span class="panel-body-message-item-content-header-author">Jordan Steve</span>
+                                    <span class="panel-body-message-item-content-header-publictime">10:00 AM</span>
+                                </div>
+                                <div class="panel-body-message-item-content-body">
+                                    <span>
+                                        给我说说《遮天》吧。
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body-message-item">
+                            <img class="panel-body-message-item-icon" src="https://i.loli.net/2018/06/30/5b373450333a8.jpg">
+                            <div class="panel-body-message-item-content">
+                                <div class="panel-body-message-item-content-header">
+                                    <span class="panel-body-message-item-content-header-author">Steve Jobs</span>
+                                    <span class="panel-body-message-item-content-header-publictime">11:03 PM</span>
+                                </div>
+                                <div class="panel-body-message-item-content-body">
+                                    <span>
+                                        叶凡：本书男主角，与众老同学在泰山聚会时一同被九龙拉棺带离地球，进入北斗星域，得知自己是荒古圣体。历险禁地，习得源术，斗圣地世家，战太古生物，重组天庭，叶凡辗转四方得到许多际遇和挑战，功力激增，眼界也渐渐开阔，最后以力证道，取得各族认可，成就天帝果位，率天庭举教成仙。
+                                        姬紫月：本书女主角，初次出场于姬家袭击颜如玉的行动，因被叶凡劫持一同经历青铜古殿历险，依靠碎裂的神光遁符解除禁制，反过来挟持叶凡。后一同进入太玄派寻找秘术，在叶凡逃离太玄后姬紫月于孔雀王之乱中被华云飞追杀，又与叶凡相遇，被叶凡护送回姬家，渐渐对叶凡产生微妙感情。后成为叶凡的妻子，千载后于飞仙星成仙。七十万年后，于红尘中历九世而化战仙的叶凡与狠人、无始、冥皇汇合，强势打入仙域，一家得团圆。
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-body-chatbox-stripline-active"><div></div><span>New Messages</span><div></div></div>
+
+                        <div class="panel-body-message-item">
+                            <img class="panel-body-message-item-icon" src="https://i.loli.net/2018/06/30/5b373450333a8.jpg">
+                            <div class="panel-body-message-item-content">
+                                <div class="panel-body-message-item-content-header">
+                                    <span class="panel-body-message-item-content-header-author">Steve Jobs</span>
+                                    <span class="panel-body-message-item-content-header-publictime">11:03 PM</span>
+                                </div>
+                                <div class="panel-body-message-item-content-body">
+                                    <span>
+                                            摸摸，真的会哒吗？
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 发送框 -->
+                <div id="message-column-row3-chatbox-sendbar">
+                    <form id="message-column-row3-chatbox-sendbar-form">
+                        <button type="submit" id="message-column-row3-chatbox-sendbar-form-button">+</button>
+                        <input id="message-column-row3-chatbox-sendbar-form-input" placeholder="Well,now we can begin to..." type="text">
+                    </form>
+                </div>
+            </div>               
+        </div>
+    </div>
 </body>
 </html>
