@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>16</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <!-- 链接到页面 CSS -->
+    <link rel="stylesheet" href="css/style_base.css">
+    <!-- 链接到 fontawesome CDN -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">       
+</head>
+<body>
+<!-- 主容器 -->
+<div id="main-box">
+    <!-- 简历容器 -->
+    <div id="resume">
+        <!-- 简历头部 -->
+        <div id="resume-header">
+            <div id="resume-header-icon"></div>
+            <div id="resume-header-text">
+                <span id="resume-header-text-name">Jone.Mity</span>
+                <span id="resume-header-text-describe">To love oneself is the beginning of a lifelong romance. </span>
+            </div>
+            <div id="resume-header-attributes">
+                <div class="resume-header-attributes-column">
+                    <span><i class="fa fa-user" aria-hidden="true"></i>乔恩.买买提</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>美国.华盛顿</span>
+                </div>
+                <div class="resume-header-attributes-column">
+                    <span><i class="fa fa-birthday-cake" aria-hidden="true"></i>2001.01.01</span>
+                    <span><i class="fa fa-qq" aria-hidden="true"></i>30330303</span>
+                </div>
+                <div class="resume-header-attributes-column">
+                    <span><i class="fa fa-phone" aria-hidden="true"></i>13303033033</span>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i>Jonemity@baidu.com</span>
+                </div>
+            </div>
+        </div>
+        <!-- 简历身体 -->
+        <div id="resume-body">
+            <div id="resume-body-column">
+                
+                <div class="resume-body-item">
+                    <div class="resume-body-item-head">专业技能</div>
+                    <div class="resume-body-item-body">
+                        <span>熟练掌握 HTML 和 CSS .</span>
+                        <span>熟练使用 JAVASCRIPT .</span>
+                        <span>熟练使用 PHOTOSHOP .</span>
+                        <span>熟练跑腿 .</span>
+                    </div>
+                </div>
+
+                <div class="resume-body-item">
+                    <div class="resume-body-item-head">专业技能</div>
+                    <div class="resume-body-item-body">
+                        <span>熟练掌握 HTML 和 CSS .</span>
+                        <span>熟练使用 JAVASCRIPT .</span>
+                        <span>熟练使用 PHOTOSHOP .</span>
+                        <span>熟练跑腿 .</span>
+                    </div>
+                </div>
+              
+
+            </div>
+            <div id="resume-body-column">
+                <div class="resume-body-item">
+                    <div class="resume-body-item-head">专业技能</div>
+                    <div class="resume-body-item-body">
+                        <span>熟练掌握 HTML 和 CSS .</span>
+                        <span>熟练使用 JAVASCRIPT .</span>
+                        <span>熟练使用 PHOTOSHOP .</span>
+                        <span>熟练跑腿 .</span>
+                    </div>
+                </div>
+
+                <div class="resume-body-item">
+                    <div class="resume-body-item-head">专业技能</div>
+                    <div class="resume-body-item-body">
+                        <span>熟练掌握 HTML 和 CSS .</span>
+                        <span>熟练使用 JAVASCRIPT .</span>
+                        <span>熟练使用 PHOTOSHOP .</span>
+                        <span>熟练跑腿 .</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="resume-footer">
+            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+            <button id="resume-footer-button">PUSH</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+document.getElementById('resume-footer-button').onclick = function(){
+    var button_word = document.getElementById('resume-footer-button').innerText;
+    console.log(button_word);
+    if (button_word == '别乱点！'){
+        document.getElementById('resume-footer-button').innerHTML = '哎呀，有完没完了？？？';
+    }
+    else{
+        document.getElementById('resume-footer-button').innerHTML = '别乱点！';
+    }
+}
+</script>
+</body>
+</html>

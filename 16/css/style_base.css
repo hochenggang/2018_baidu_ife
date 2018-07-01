@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+}
+/* 主容器 */
+#main-box {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 233, 233);
+    padding: 2%;
+}
+/* 简历容器 */
+#resume {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 75%;
+    height: auto;
+    box-shadow: 0px 0px 5px  #43341B;
+}
+
+#resume-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+#resume-header-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url(https://i.loli.net/2018/06/30/5b373450333a8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+}
+#resume-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    color: #43341B;
+    margin-top: 20px;
+}
+#resume-header-text-describe {
+    font-size: 20px;
+    font-weight: lighter;
+}
+#resume-header-attributes {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: space-evenly;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.resume-header-attributes-column {
+    display: flex;
+    flex-direction: column;
+    color: #43341B;
+}
+.resume-header-attributes-column i {
+    margin-right: 10px;
+}
+
+#resume-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#resume-body-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: pink;
+    padding: 50px;
+}
+.resume-body-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; 
+}
+.resume-body-item-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 20%;
+    align-items: center;
+    border-radius: 999px;
+    background-color: #43341B;
+    color: rgb(241, 241, 241);
+    padding: 5px 20px 5px 10px;
+
+}
+.resume-body-item-body {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 30px 0px;
+    color: #43341B;
+    font-size: 15px;
+    font-weight: lighter;
+}
+/* 底部布局 */
+#resume-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+#resume-footer-button {
+    height: 35px;
+    background: transparent;
+    border: 0px;
+    border-radius: 10px;
+    border: 1PX solid pink;
+    margin-left: 10px;
+}
+#resume-footer i {
+    color: rgb(255, 117, 140);
+}
