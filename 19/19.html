@@ -83,8 +83,10 @@ function findListItem(sectionId, spanCont) {
 
 function getActiveLinkContent(sectionId) {
     // 返回某个section下，class为active的链接中包含的文字内容
-    var this_section = document.getElementById(sectionId);
-    var all_a_of_thissection = this_section.getElementsByTagName('a');
+    //var this_section = document.getElementById(sectionId);
+    var this_section = document.querySelector('#'+sectionId);
+    //var all_a_of_thissection = this_section.getElementsByTagName('a');
+    var all_a_of_thissection = this_section.querySelectorAll('a');
     var need_as =[];
     for (let i = 0; i < all_a_of_thissection.length; i++) {
         var this_a = all_a_of_thissection[i];
