@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #C5EFF7;
+    padding: 2%;
+}
+/* 主容器 */
+#main-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 75%;
+    box-shadow: 0px 0px 5px  rgb(104, 95, 81);
+    padding: 5px;
+}
+#say-hello {
+    color: white;
+    font-weight: bold;
+}
+.individual_func {
+    display: flex;
+    flex-direction: column;
+    background-color: #52B3D9;
+    padding: 20px;
+    margin: 5px;
+}
+.individual_func input {
+    height: 1.5em;
+    width: 200px;
+    border: 1px solid white;
+}
+.individual_func button {
+    height: 1.5em;
+    border: 1px solid white;
+}
+p {
+    margin: 0px 0px 15px 0px;
+    font-size: 15px;
+    color: white;
+}
+
+.result {
+    margin-top: 5px;
+    height: auto;
+    word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+    color: white;
+
+}
+#times-table table td{
+    border: 1px solid white;
+    border-collapse: collapse;
+
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>17-18</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <!-- 链接到页面 CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+<!-- 主容器 -->
+<div id="main-box">
+    <div id="say-hello" class="individual_func"></div>
+    <div class="individual_func">
+        <p class="title">1. 简单计算器</p>
+        <div id="simple-calculator">
+            <input id="simple-calculator-first-number" placeholder="支持小数和负数">
+            <select id="simple-calculator-operater">
+                <option value="simple-calculator-add">加</option>
+                <option value="simple-calculator-minus">减</option>
+                <option value="simple-calculator-times">乘</option>
+                <option value="simple-calculator-divide">除</option>
+            </select>
+            <input id="simple-calculator-second-number">
+            <button id="simple-calculator-start">等于</button>
+            <div class="result" id="simple-calculator-result"></div>
+        </div>
+    </div>  
+    <div class="individual_func">
+        <p class="title">2. 非负整十进制数转二进制数</p>
+        <div id="simple-dec2bin">
+            <input id="simple-dec2bin-input" placeholder="输入一个十进制非负整数">
+            <button id="simple-dec2bin-start">转换</button>
+            <div class="result" id="simple-dec2bin-result"></div>
+        </div>
+    </div>
+    <div class="individual_func">
+        <p class="title">3. 非负整十进制数转二进制数</p>
+        <div id="simple2-dec2bin">
+            <input id="simple2-dec2bin-input" placeholder="输入一个十进制非负整数">
+            <input id="simple2-dec2bin-limit" placeholder="输入最低位数">
+            <button id="simple2-dec2bin-start">转换</button>
+            <div class="result" id="simple2-dec2bin-result"></div>
+        </div>
+    </div> 
+
+    <div class="individual_func">
+        <p class="title">4. PAPAPA</p>
+        <div id="papapa">
+            <input id="papapa-input" placeholder="输入一个十进制非负整小点的数">
+            <button id="papapa-start">PA</button>
+            <div class="result" id="papapa-result"></div>
+        </div>
+    </div> 
+    <div class="individual_func">
+        <p class="title">5. 生成九九乘法表</p>
+        <div id="times-table">
+            <button id="times-table-start">生成</button>
+            <div class="result" id="times-table-result">
+
+            </div>
+        </div>
+    </div> 
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
