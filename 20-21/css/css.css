@@ -1,0 +1,38 @@
+#box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#box-fade{
+    z-index: 0;
+    border: 2px solid pink;
+    margin-right: 10px;
+}
+#fade-btn {
+    position: absolute;
+    background-color: rgb(0, 0, 0); 
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    margin: 10px;
+    z-index: 1;
+    font-weight: bold;
+    color: white;
+}
+#fade-obj {
+    width:480px;
+    height:480px;
+    background:rgb(255, 110, 110);
+}
+#pic-box{
+    width: 480px;
+    height: 480px;
+    background-image:url("http://ife.baidu.com/2016/static/img/erik_ce204002.jpg");
+    background-repeat: no-repeat; 
+    border: 2px solid pink;
+}
