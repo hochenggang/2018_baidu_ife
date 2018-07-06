@@ -124,7 +124,7 @@ function ajax_search_get(){
     xhr.onerror = function (e) {
     console.error(xhr.statusText);
     };
-    xhr.open('GET', 'http://api.d-c.bid/douban250?keyword='+keyword, true);
+    xhr.open('GET', 'https://api.d-c.bid/douban250?keyword='+keyword, true);
     xhr.send(null);
 }
 }
