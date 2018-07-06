@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>豆瓣 TOP250</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+        }
+        #header{
+            width: 80%;
+            padding: 10px 0px 10px 0px;
+            background-color: pink;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            margin-bottom: 10px; 
+
+
+        }
+        #header-title{
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        #header-title p{
+            
+            font-size: 20px;
+            color: white;
+            padding: 0;
+            margin: 0;
+        }
+        #ajax-search{
+            border: none;
+            background-color: white;
+            margin-right: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #ajax-result{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .item{
+            margin-bottom: 10px;
+            background-color: antiquewhite;
+            display: flex;
+
+        }
+        .item-cover{
+            height: 200px;
+            margin: 10px; 
+            border: 5px solid white;
+        }
+        .item_info{
+            display: flex;
+            flex-direction: column;
+            margin: 10px; 
+        }
+        .item_info span{
+            margin-top: 5px; 
+        }
+        .item-title{
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+        .item-origin a{
+            text-decoration: none;
+            font-size: 15px;
+            color: rgb(0, 183, 255);
+        }
+    </style>
+</head>
+<body>   
+    <div id="header">
+        <div id="header-title"><p>豆瓣 TOP250</p></div>
+        <form>
+            <label for=""></label>
+            <input type="text" name="ajax-search" id="ajax-search" placeholder="搜索">
+        </form>
+    </div>
+    <div id="ajax-result"></div>
+<script>
+var ajax_result = document.getElementById('ajax-result');
+var ajax_search = document.getElementById('ajax-search');
+ajax_search.addEventListener('input',function(event){if(ajax_search.value){ajax_search_get()}});
+function ajax_search_get(){
+    var keyword = ajax_search.value;
+    if (keyword.length >= 1){
+    console.log(keyword,keyword.length);
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+    // 通信成功时，状态值为4
+    if (xhr.readyState === 4){
+        if (xhr.status === 200){
+        //console.log(xhr.responseText);
+        if (xhr.responseText.length > 5){
+            json_result = JSON.parse(xhr.responseText);
+            var innerHTML_p = '';
+            for (i=0;i<json_result.length;i++){
+                item_cover = '<img class="item-cover" src="'+json_result[i][3]+'">'
+                item_title = '<span class="item-title">'+json_result[i][1]+'</span>'
+                item_origin = '<span class="item-origin">'+'<a href="'+json_result[i][2]+'">'+ '-> 去胖鸟下载' +'</a>'+'</span>'
+                item_brief = '<span class="item-brief">'+json_result[i][4]+'</span>'
+                innerHTML_p = innerHTML_p+('<div class="item">'+item_cover + '<div class="item_info">'+ item_title+item_origin+item_brief +'</div></div>');
+            }
+            ajax_result.innerHTML = innerHTML_p;
+            
+        }else{
+            ajax_result.innerHTML = '没有符合的电影';
+        }
+        } else {
+        console.error(xhr.statusText);
+        }
+    }
+    };
+    xhr.onerror = function (e) {
+    console.error(xhr.statusText);
+    };
+    xhr.open('GET', 'http://api.d-c.bid/douban250?keyword='+keyword, true);
+    xhr.send(null);
+}
+}
+</script>
+</body>
+</html>
