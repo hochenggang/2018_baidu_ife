@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>20-21</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <p>任务一</p>
+    <div class="mission">
+        <div id="input-group">
+            <label>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a" type="text">
+            <label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
+        </div>
+        <div id="Button-group">
+            <!-- if(A||B){if(!isNaN){var isNum = true;}} -->
+            <button data-func="isNum">判断当前选中的输入框输入内容是否为数字</button>
+            <!-- Number(A).toFixed(B) -->
+            <button data-func="roundAbyB">把 A 四舍五入为 B 个小数位数的数字</button>
+            <!-- Math.abs(A||B) -->
+            <button data-func="toabs">当前选中数字的绝对值</button>
+            <!-- Math.ceil(A||B) -->
+            <button data-func="toceil">对当前选中的数字进行上舍入</button>
+            <!-- Math.floor(A||B) -->
+            <button data-func="tofloor">对当前选中的数字进行下舍入</button>
+            <!-- Math.round(A||B) -->
+            <button data-func="toround">把当前选中的数字四舍五入为最接近的整数</button>
+            <!-- Math.max(A,B) -->
+            <button data-func="tomax">返回 A 和 B 中的最高值</button>
+            <!-- Math.min(A,B) -->
+            <button data-func="tomin">返回 A 和 B 中的最低值</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+
+    <p>任务二</p>
+    <div class="mission">
+        <div id="input-group-2"
+            <label>String A:
+                <input id="radio-a-2" type="radio" checked="true" name="str-obj" value="a">
+            </label>
+            <textarea id="str-a-2"></textarea>
+            <label>String B:
+                <input id="radio-b-2" type="radio" name="str-obj" value="b">
+            </label>
+            <textarea id="str-b-2"></textarea>        
+            <label>Num A：<input id="num-a-2" type="number" value="0"></label>
+            <label>Num B：<input id="num-b-2" type="number" value="1"></label>
+        </div>
+        <div  id="Button-group-2">
+            <!-- str.length  -->
+            <button data-func="get-strlength">获取当前选中输入的内容长度</button>
+            <!--  stringObject.charAt(index)  -->
+            <button data-func="get-strnumber3">当前选中输入中的第3个字符</button>
+            <!--  stringObject.concat(stringX,stringX,...,stringX)  -->
+            <button data-func="str-concat">把两个输入框的文字连接在一起输出（concat）</button>
+            <!--  stringObject.indexOf(searchvalue,fromindex) when false -> -1  -->
+            <button data-func="BindexOfA">输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+            <!--  stringObject.lastIndexOf(searchvalue,fromindex)  -->
+            <button data-func="A-lastIndexOf-B">输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button>
+            <!-- stringObject.slice(start,end)  -->
+            <button data-func="slice-by-ab">使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+            <!--  -->
+            <button data-func="get-lines">当前选中输入框的行数</button>
+            <!--  -->
+            <button data-func="get-substr">使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button>
+            <!--  -->
+            <button data-func="to-upper">把所选输入框中的内容全部转为大写</button>
+            <!--  -->
+            <button data-func="to-lower">把所选输入框中的内容全部转为小写</button>
+            <!--  -->
+            <button data-func="str-ipblank">把所选输入框中内容的半角空格全部去除</button>
+            <!--  -->
+            <button data-func="replace-a">把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+        </div>
+        <p id="result-2"></p>
+    </div>
+        
+</body>
+<script src="js/mission1.js"></script>
+<!--  -->
+<script src="js/mission2.js"></script>
+
+</html>
