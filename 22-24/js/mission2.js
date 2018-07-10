@@ -132,7 +132,7 @@ function compute_2(event){
             result_2.innerHTML = '执行结果：' + slice_by_ab_result_result;
             break;           
 
-            case 'A-lastIndexOf-B':
+        case 'A-lastIndexOf-B':
             // 不需要判断输入，直接合并字符串
             var A_lastIndexOf_B_result = input_str_b_2.lastIndexOf(input_str_a_2);
             if (A_lastIndexOf_B_result === -1){
@@ -148,41 +148,123 @@ function compute_2(event){
             
             if (choosed_num !== ''){
                 if(choosed_num === 'A'){
-                    
+                    document.getElementById('str-a-2').getAttributeNode('id').value = 'ta';
+                    get_lines_result = calculateHeight();
+                    document.getElementById('ta').getAttributeNode('id').value = 'str-a-2';
                 }else{
-                    
+                    document.getElementById('str-b-2').getAttributeNode('id').value = 'ta';
+                    get_lines_result = calculateHeight();
+                    document.getElementById('ta').getAttributeNode('id').value = 'str-b-2';
                 }
                 
             }else{
-                
+                get_lines_result = '输入为空';
             }      
-          
-            
-            console.log('执行结果：'  );
-            result_2.innerHTML = '执行结果：';
+            console.log('执行结果：'+get_lines_result  );
+            result_2.innerHTML = '执行结果：'+get_lines_result;
             break;                 
 
         case 'get-substr':
+            var get_substr_result = '';
+            if (isNum(input_num_a_2)==='1' && isNum(input_num_b_2)==='1'){
+                var star = Number(input_num_a_2);
+                var length = Number(input_num_b_2);
+            } else {
+                var star = '';
+                var length = '';
+            }            
+            // 判断数值
+            if (star !== ''){
+                if (choosed_num !== ''){
+                    if(choosed_num === 'A'){
+                        get_substr_result_inputstr = input_str_a_2;
+                    }else{
+                        get_substr_result_inputstr = input_str_b_2;
+                    }
+                    get_substr_result = get_substr_result_inputstr.substr(star,length);
+                }else{
+                    get_substr_result = '请先选择一个文本框';
+                }      
+            } else{
+                get_substr_result = '请输入数字';
+            }   
             
+            console.log('执行结果：'  + get_substr_result);
+            result_2.innerHTML = '执行结果：' + get_substr_result;
+            break;  
+
+        case 'to-upper':
             // 判断输入
-            
             if (choosed_num !== ''){
                 if(choosed_num === 'A'){
-                    
+                    to_upper_result = input_str_a_2.toLocaleUpperCase();
+
                 }else{
-                    
+                    to_upper_result = input_str_b_2.toLocaleUpperCase();
                 }
                 
             }else{
-                
+                to_upper_result = '请先选择一个文本框';
             }      
-          
-            
-            console.log('执行结果：'  );
-            result_2.innerHTML = '执行结果：';
+            console.log('执行结果：'+to_upper_result);
+            result_2.innerHTML = '执行结果：'+to_upper_result;
             break;   
 
+        case 'to-lower':
+            // 判断输入
+            if (choosed_num !== ''){
+                if(choosed_num === 'A'){
+                    to_lower_result = input_str_a_2.toLocaleLowerCase();
 
+                }else{
+                    to_lower_result = input_str_b_2.toLocaleLowerCase();
+                }
+                
+            }else{
+                to_lower_result = '请先选择一个文本框';
+            }      
+            console.log('执行结果：'+to_lower_result);
+            result_2.innerHTML = '执行结果：'+to_lower_result;
+            break;   
+
+        case 'str-ipblank':
+            // 判断输入
+            if (choosed_num !== ''){
+                if(choosed_num === 'A'){
+                    
+                    str_ipblank_result = input_str_a_2.replace(/ /g,'');
+
+                }else{
+                    str_ipblank_result = input_str_b_2.replace(/ /g,'');
+                }
+                
+            }else{
+                str_ipblank_result = '请先选择一个文本框';
+            }      
+            console.log('执行结果：'+str_ipblank_result);
+            result_2.innerHTML = '执行结果：'+str_ipblank_result;
+            break;  
+
+        case 'replace-a':
+            // 判断输入
+            if (choosed_num !== ''){
+                if(choosed_num === 'A'){
+                    
+                    replace_a_result = input_str_a_2.replace(/a/g,input_str_b_2);
+                    document.getElementById('str-a-2').value = input_str_a_2.replace(/a/g,input_str_b_2);
+    
+                }else{
+                    replace_a_result = input_str_b_2.replace(/a/g,input_str_a_2);
+                    document.getElementById('str-b-2').value =  input_str_b_2.replace(/a/g,input_str_a_2);
+
+                }
+                
+            }else{
+                replace_a_result = '请先选择一个文本框';
+            }      
+            console.log('执行结果：'+replace_a_result);
+            result_2.innerHTML = '执行结果：'+replace_a_result;
+            break; 
     }
     console.log('--------------END--------------');
     
@@ -199,3 +281,55 @@ function isNum(input){
     }
     return isNum_result;
  }
+
+ // 判断文本框行数，引用自 https://stackoverflow.com/questions/1760629/how-to-get-number-of-rows-in-textarea-using-javascript/1761203#1761203
+ var calculateContentHeight = function( ta, scanAmount ) {
+    var origHeight = ta.style.height,
+        height = ta.offsetHeight,
+        scrollHeight = ta.scrollHeight,
+        overflow = ta.style.overflow;
+    /// only bother if the ta is bigger than content
+    if ( height >= scrollHeight ) {
+        /// check that our browser supports changing dimension
+        /// calculations mid-way through a function call...
+        ta.style.height = (height + scanAmount) + 'px';
+        /// because the scrollbar can cause calculation problems
+        ta.style.overflow = 'hidden';
+        /// by checking that scrollHeight has updated
+        if ( scrollHeight < ta.scrollHeight ) {
+            /// now try and scan the ta's height downwards
+            /// until scrollHeight becomes larger than height
+            while (ta.offsetHeight >= ta.scrollHeight) {
+                ta.style.height = (height -= scanAmount)+'px';
+            }
+            /// be more specific to get the exact height
+            while (ta.offsetHeight < ta.scrollHeight) {
+                ta.style.height = (height++)+'px';
+            }
+            /// reset the ta back to it's original height
+            ta.style.height = origHeight;
+            /// put the overflow back
+            ta.style.overflow = overflow;
+            return height;
+        }
+    } else {
+        return scrollHeight;
+    }
+}
+
+var calculateHeight = function() {
+    var ta = document.getElementById("ta"),
+        style = (window.getComputedStyle) ?
+            window.getComputedStyle(ta) : ta.currentStyle,
+        
+        // This will get the line-height only if it is set in the css,
+        // otherwise it's "normal"
+        taLineHeight = parseInt(style.lineHeight, 10),
+        // Get the scroll height of the textarea
+        taHeight = calculateContentHeight(ta, taLineHeight),
+        // calculate the number of lines
+        numberOfLines = Math.ceil(taHeight / taLineHeight);
+
+    return numberOfLines;
+};
+

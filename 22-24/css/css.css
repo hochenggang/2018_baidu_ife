@@ -23,4 +23,8 @@ button {
 #input-group-2 {
     margin: 10px 0;
 }
+#ta {
+    width: 300px;
+    line-height: 20px;
+}
 
