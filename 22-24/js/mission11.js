@@ -55,7 +55,7 @@ function change_func(event){
                     list_menu3.push(menuArr[i][1]);
                 }
             }
-            console.log(list_menu1,list_menu2,list_menu3,obj_menu);
+            //console.log(list_menu1,list_menu2,list_menu3,obj_menu);
             for (var l1 in list_menu1){
                 //console.log(obj_menu[list_menu1[l1]])
                 result_obj[obj_menu[list_menu1[l1]]] = {name:list_menu1[l1],subMenu:''};
@@ -65,7 +65,7 @@ function change_func(event){
                 if (list_menu1[l1][4]==='1') {
                     for (var l2 in list_menu2){
                         //console.log(list_menu2[l2])
-                        console.log(list_menu2[l2][4])
+                        //console.log(list_menu2[l2][4])
                         if (list_menu2[l2][4]==='1'){
                         l1_sub[obj_menu[list_menu2[l2]]] = {name:list_menu2[l2] ,subMenu:''};
                     }
@@ -75,7 +75,7 @@ function change_func(event){
                 if (list_menu1[l1][4]==='2') {
                     for (var l2 in list_menu2){
                         //console.log(list_menu2[l2])
-                        console.log(list_menu2[l2][4])
+                        //console.log(list_menu2[l2][4])
                         if (list_menu2[l2][4]==='2'){
                         l1_sub[obj_menu[list_menu2[l2]]] = {name:list_menu2[l2] ,subMenu:''};
                     }
@@ -84,6 +84,7 @@ function change_func(event){
                 }
             }
             console.log(result_obj);
+            console.log('只能转换到第二级对象，更深层次逻辑太复杂，后续再找寻更好的办法');
         
             change_result.innerHTML = '已输出到console';
            
