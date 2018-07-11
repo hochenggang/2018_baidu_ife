@@ -84,7 +84,7 @@
     <!-- mission3 -->
     <div class="mission">
         <label for="name-strpro-input">输入需要处理的字符串：</label>
-        <input id="id-strpro-input" type="text" name="name-strpro-input">
+        <input id="id-strpro-input" class="long-input" type="text" name="name-strpro-input">
         <button id="id-strpro-button">开始处理</button>
         <p class="result_with_style"  id="id-strpro-result"></p>
     </div>
@@ -93,7 +93,7 @@
     <!-- mission4 -->
     <div class="mission">
         <label for="name-strpro2-input">输入需要处理的字符串：</label>
-        <input id="id-strpro2-input" type="text" name="name-strpro2-input">
+        <input id="id-strpro2-input"  class="long-input" type="text" name="name-strpro2-input">
         <button id="id-strpro2-button">开始处理</button>
         <p class="result_with_style"  id="id-strpro2-result"></p>
     </div>
@@ -105,19 +105,111 @@
             tree={"id":0,"name":"root","left":{"id":1,"name":"Simon","left":{"id":3,"name":"Carl1","left":{"id":7,"name":"Lee","left":{"id":11,"name":"Fate"}},"right":{"id":8,"name":"Annie","left":{"id":12,"name":"Saber"}}},"right":{"id":4,"name":"Tony","left":{"id":9,"name":"Candy"}}},"right":{"id":2,"name":"right","left":{"id":5,"name":"Carl2",},"right":{"id":6,"name":"Carl3","right":{"id":10,"name":"Kai"}}}};
         </blockquote>
         <label for="name-object-input">输入ID来查找NAME</label>
-        <input id="id-object-input" name="name-object-input" type="text">
+        <input id="id-object-input"  class="long-input" name="name-object-input" type="text">
         <button id="id-object-button">开始</button>
         <p class="result_with_style"  id="id-object-result"></p>
 
         <label for="name-object-input2">输入NAME来查找ID</label>
-        <input id="id-object-input2" name="name-object-input2" type="text">
+        <input id="id-object-input2"  class="long-input" name="name-object-input2" type="text">
         <button id="id-object-button2">开始</button>
         <p class="result_with_style" id="id-object-result2"></p>
+        <p>二叉树排序已输出至CONSOLE</p>
     </div>
+
+    <p>对列练习-数组右侧取值</p>
+    <!-- mission6 -->
+    <div class="mission">
+        <input id="queue-input" class="long-input" type="text">
+        <p id="queue-cont" class="result_with_style">队列内容：apple-&gt;pear</p>    
+        <div id="queue-btng">
+            <button data-btnfunc="queue-in-btn">入队</button>
+            <button data-btnfunc="queue-out-btn">出队</button>
+            <button data-btnfunc="queue-font-btn">打印队头元素内容</button>
+            <button data-btnfunc="queue-empty-btn">判断队列是否为空</button>
+        </div>
+    </div>
+
+    <p>对列练习-数组左侧取值</p>
+    <!-- mission7 -->
+    <div class="mission">
+        <input id="queue-input-left" class="long-input" type="text">
+        <p id="queue-cont-left" class="result_with_style">队列内容：apple&lt;-pear</p>    
+        <div id="queue-btng-left">
+            <button data-btnfunc="queue-in-btn">入队</button>
+            <button data-btnfunc="queue-out-btn">出队</button>
+            <button data-btnfunc="queue-font-btn">打印队头元素内容</button>
+            <button data-btnfunc="queue-empty-btn">判断队列是否为空</button>
+        </div>
+    </div>
+
+    <p>栈练习-数组右侧取值</p>
+    <!-- mission8 -->
+    <div class="mission">
+        <input id="stack-input-right" class="long-input" type="text">
+        <p id="stack-cont-right" class="result_with_style">栈内容：apple-&gt;pear</p>    
+        <div id="stack-btng-right">
+            <button data-btnfunc="stack-in-btn">入栈</button>
+            <button data-btnfunc="stack-out-btn">出栈</button>
+            <button data-btnfunc="stack-font-btn">打印栈顶元素内容</button>
+            <button data-btnfunc="stack-empty-btn">判断栈是否为空</button>
+        </div>
+    </div>
+    <p>栈练习-数组左侧取值</p>
+    <!-- mission9 -->
+    <div class="mission">
+        <input id="stack-input-left" class="long-input" type="text">
+        <p id="stack-cont-left" class="result_with_style">栈内容：apple&lt;-pear</p>    
+        <div id="stack-btng-left">
+            <button data-btnfunc="stack-in-btn">入栈</button>
+            <button data-btnfunc="stack-out-btn">出栈</button>
+            <button data-btnfunc="stack-font-btn">打印栈顶元素内容</button>
+            <button data-btnfunc="stack-empty-btn">判断栈是否为空</button>
+        </div>
+    </div>
+
+    <p>排序练习</p>
+    <!-- mission10 -->
+    <div class="mission">
+        <p>sort_1 = [43, 54, 4, -4, 84, 100, 58, 27, 140];</p>
+        <p>sort_2 = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];</p>
+        <p>sort_3 = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];</p>
+        <p>sort_4 = [{id:1,name:"candy",value:40},{id:2,name:"Simon",value:50},{id:3,name:"Tony",value:45},{id:4,name:"Annie",value:60}];</p>
+    
+        <div id="sort-btng">
+            <button data-btnfunc="sort1">sort1+</button>
+            <button data-btnfunc="sort1_">sort1-</button>
+            <button data-btnfunc="sort2">sort2+</button>
+            <button data-btnfunc="sort2_">sort2-</button>
+            <button data-btnfunc="sort3">sort3</button>
+            <button data-btnfunc="sort4">sort4</button>
+        </div>
+        <p id="sort-result" class="result_with_style"></p>
+    </div>
+
+    <p>对象转数组练习</p>
+    <!-- mission11 -->
+    <div class="mission">
+        <p>对象转数组 {"Tony":{"Math":95,"English":79,"Music":68},"Simon":{"Math":100,"English":95,"Music":98},"Annie":{"Math":54,"English":65,"Music":88}};</p>
+        <p>数组转对象 [[1,"Area1",-1],[2,"Area2",-1],[3,"Area1-1",1],[4,"Area1-2",1],[5,"Area2-1",2],[6,"Area2-2",2],[7,"Area1-2-3",4],[8,"Area2-2-1",6],];</p>
+        
+        <div id="change-btng">
+            <button data-btnfunc="change1">对象转数组</button>
+            <button data-btnfunc="change2">数组转对象</button>
+
+        </div>
+        <p id="change-result" class="result_with_style"></p>
+    </div>
+
 </body>
 <script src="js/mission1.js"></script>
 <script src="js/mission2.js"></script>
 <script src="js/mission3.js"></script>
 <script src="js/mission4.js"></script>
 <script src="js/mission5.js"></script>
+<script src="js/mission6.js"></script>
+<script src="js/mission7.js"></script>
+<script src="js/mission8.js"></script>
+<script src="js/mission9.js"></script>
+<script src="js/mission10.js"></script>
+<script src="js/mission11.js"></script>
 </html>

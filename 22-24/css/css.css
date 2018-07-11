@@ -31,20 +31,8 @@ button {
     width: 300px;
     line-height: 20px;
 }
-#id-strpro-input {
-    width: 70%;
-    height: 20px;
-}
-#id-strpro2-input {
-    width: 70%;
-    height: 20px;
-}
-#id-object-input {
-    width: 70%;
-    height: 20px;
-}
-#id-object-input2 {
-    width: 70%;
-    height: 20px;
-}
 
+.long-input {
+        width: 70%;
+    height: 20px;
+}
