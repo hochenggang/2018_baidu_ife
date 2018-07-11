@@ -31,7 +31,7 @@
             <!-- Math.min(A,B) -->
             <button data-func="tomin">返回 A 和 B 中的最低值</button>
         </div>
-        <p id="result"></p>
+        <p class="result_with_style"  id="result"></p>
     </div>
 
 
@@ -76,7 +76,7 @@
             <!-- stringObject.replace(regexp/substr,replacement)  -->
             <button data-func="replace-a">把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
         </div>
-        <p id="result-2"></p>
+        <p class="result_with_style"  id="result-2"></p>
     </div>
 
     <p>字符串练习-去除首尾空格</p>
@@ -86,7 +86,7 @@
         <label for="name-strpro-input">输入需要处理的字符串：</label>
         <input id="id-strpro-input" type="text" name="name-strpro-input">
         <button id="id-strpro-button">开始处理</button>
-        <p id="id-strpro-result"></p>
+        <p class="result_with_style"  id="id-strpro-result"></p>
     </div>
 
     <p>字符串练习-去除重复字符</p>
@@ -95,12 +95,29 @@
         <label for="name-strpro2-input">输入需要处理的字符串：</label>
         <input id="id-strpro2-input" type="text" name="name-strpro2-input">
         <button id="id-strpro2-button">开始处理</button>
-        <p id="id-strpro2-result"></p>
+        <p class="result_with_style"  id="id-strpro2-result"></p>
     </div>
-        
+
+    <p>对象练习</p>
+    <!-- mission5 -->
+    <div class="mission">
+        <blockquote>
+            tree={"id":0,"name":"root","left":{"id":1,"name":"Simon","left":{"id":3,"name":"Carl1","left":{"id":7,"name":"Lee","left":{"id":11,"name":"Fate"}},"right":{"id":8,"name":"Annie","left":{"id":12,"name":"Saber"}}},"right":{"id":4,"name":"Tony","left":{"id":9,"name":"Candy"}}},"right":{"id":2,"name":"right","left":{"id":5,"name":"Carl2",},"right":{"id":6,"name":"Carl3","right":{"id":10,"name":"Kai"}}}};
+        </blockquote>
+        <label for="name-object-input">输入ID来查找NAME</label>
+        <input id="id-object-input" name="name-object-input" type="text">
+        <button id="id-object-button">开始</button>
+        <p class="result_with_style"  id="id-object-result"></p>
+
+        <label for="name-object-input2">输入NAME来查找ID</label>
+        <input id="id-object-input2" name="name-object-input2" type="text">
+        <button id="id-object-button2">开始</button>
+        <p class="result_with_style" id="id-object-result2"></p>
+    </div>
 </body>
 <script src="js/mission1.js"></script>
 <script src="js/mission2.js"></script>
 <script src="js/mission3.js"></script>
 <script src="js/mission4.js"></script>
+<script src="js/mission5.js"></script>
 </html>

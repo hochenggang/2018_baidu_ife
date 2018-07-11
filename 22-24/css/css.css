@@ -17,6 +17,10 @@ button {
     padding: 5px;
     margin: 3px;
 }
+.result_with_style{
+    color: rgb(255, 66, 98);
+
+}
 #input-group {
     margin: 10px 0;
 }
@@ -35,5 +39,12 @@ button {
     width: 70%;
     height: 20px;
 }
-
+#id-object-input {
+    width: 70%;
+    height: 20px;
+}
+#id-object-input2 {
+    width: 70%;
+    height: 20px;
+}
 
