@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="cmn-Hans-CN">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>25-27</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-    
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css">
 </head>
 <body>
 <div id="main-box">
+    <div id="date-selector">  
+        <select id="year-select"></select><span>年</span>
+        <select id="month-select"></select><span>月</span>
+        <select id="day-select"></select><span>日</span>
+        <select id="hour-select"></select><span>时</span>
+        <select id="minute-select"></select><span>分</span>
+        <select id="second-select"></select><span>秒</span>
+        <p id="result-wrapper"></p>
+    </div>
     <div id="data-container"></div>
 </div>
-
 <script src="javascript/main.js"></script>
 </body>
 </html>

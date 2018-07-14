@@ -1,17 +1,28 @@
 #main-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: pink;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#date-selector {
+    position: fixed;
+    bottom: 50%;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+}
+
+#date-selector select {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(255, 217, 217);
+}
+
 #data-container {
-    font-size: 20px;
+    position: fixed;
+    bottom: 1%;
+    font-size: 1rem;
     color: black;
     text-align: center;
 }
