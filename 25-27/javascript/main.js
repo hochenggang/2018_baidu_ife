@@ -138,9 +138,7 @@ function general_output_by_timestamp(){
     let line2 = compare[1];
     let line3 = compare[2][0] + '天' +  compare[2][1] + '小时' + compare[2][2]+ '分'+ compare[2][3] + '秒';
     document.querySelector('#result-wrapper').innerHTML = line1 + '<br/>' + line2 + '<br/>' + line3;
-    setTimeout(() => {
-        general_output_by_timestamp()
-    }, 100);
+    setTimeout(general_output_by_timestamp, 100);
 }
 
 // 功能：监听月份选择框，如果发生变动就刷新天选择框
