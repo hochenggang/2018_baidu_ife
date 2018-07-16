@@ -90,7 +90,7 @@ function notice_element_click(event){
     var child_event = event.target || event.srcElement;
     // 这样就选中了 父元素中被点击的子元素，后面就可以对这个子元素进行操作
     //console.log(child_event.innerHTML);
-    input_element.value = child_event.innerHTML;
+    input_element.value = child_event.textContent;
     // 点击后关闭提示
     notice_element.innerHTML = '';
     // 设置焦点
@@ -170,5 +170,12 @@ function input_element_keydown(event){
         input_element.focus()
         
     } 
+    else if (event.keyCode === 27){
+        // 获取当前被选li的值，填充到 input
+        input_element.select();
+        // 设置焦点
+        input_element.focus()  
+    } 
+    
 }
 
