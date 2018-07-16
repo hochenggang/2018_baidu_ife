@@ -1,0 +1,37 @@
+body {
+    font-size: 1rem;
+}
+#main-box {
+    margin: 2% auto;
+    width: 50%;
+}
+#input-wrapper {
+    width: 100%;
+
+}
+#email-input {
+    border: 1px solid rgb(77, 77, 77);
+    margin-bottom: 1px;
+    font-size: 1rem;
+    width: 100%;
+    padding: 5px 5px;
+}
+
+#email-sug-wrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    padding: 5px 5px;
+}
+#email-sug-wrapper li {
+    padding: 0;
+    margin-top: 5px;
+    width: 100%;
+
+}
+#email-sug-wrapper li:hover {
+    color: green ;
+    border-left : 2px solid green;
+    padding : 2px 5px;
+}
