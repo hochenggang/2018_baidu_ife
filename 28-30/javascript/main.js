@@ -119,7 +119,7 @@ function input_element_keydown(event){
     var all_li = notice_element.querySelectorAll('li');
     var selected_li = '';
     // 响应下键被按下
-    if (event.key === 'ArrowDown'){
+    if (event.keyCode === 40){
         // 自增li的位置
         li_index += 1;
         // 判断是否上越界，若是：将定位设置为0
@@ -140,7 +140,7 @@ function input_element_keydown(event){
     }
 
     // 响应上键被按下
-    else if(event.key === 'ArrowUp'){
+    else if(event.keyCode === 38){
         // 自减li的位置
         li_index -= 1;
         // 判断是否下越界，若是：将定位设置为最后一个Li
@@ -161,7 +161,7 @@ function input_element_keydown(event){
         }
     }
     // 响应回车键被按下
-    else if (event.key === 'Enter'){
+    else if (event.keyCode === 13){
         // 获取当前被选li的值，填充到 input
         input_element.value = all_li.item(li_index).innerHTML;
         // 点击后关闭提示
