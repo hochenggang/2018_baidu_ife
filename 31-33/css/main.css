@@ -1,0 +1,23 @@
+body {
+    padding: 2%;
+
+}
+
+select {
+    padding: 5px;
+
+}
+
+td,th {
+    border: 1px solid #353535;
+    text-align: center;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin-top: 10px;
+    width: 80%;
+
+}
