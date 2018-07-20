@@ -21,3 +21,11 @@ table {
     width: 80%;
 
 }
+
+hr {
+    margin: 1% 0;
+}
+p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
