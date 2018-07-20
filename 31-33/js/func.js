@@ -1,4 +1,60 @@
-// 流程：获取输入，选择数据，格式化数据，输出
+function region_element_change(){
+    document.querySelector('#code1-table-wraper').innerHTML = '';
+    region_selected = region_element.options[region_element.selectedIndex];
+    // 判断选择框的选取情况，分别对应单一选取，均选取，均未选取。
+    if (region_selected.value !== '请选择地区' && product_selected.value !== '请选择商品'){
+        let td_list = data_filter_2(region_selected.value,'region',product_selected.value);
+        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+        let table = general_table('code1-table',th_list,td_list);
+        if(document.querySelector('#code1-table')){
+            document.querySelector('#code1-table-wraper').innerHTML = '';
+        }
+        document.querySelector('#code1-table-wraper').appendChild(table);
+    } else if(region_selected.value === '请选择地区' && product_selected.value === '请选择商品'){
+        document.querySelector('#code1-table-wraper').innerHTML = '';
+    } else if(region_selected.value !== '请选择地区' && product_selected.value === '请选择商品') {
+        // 单一选择框的情况
+        let td_list = data_filter_1(region_selected.value,'region');
+        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+        let table = general_table('code1-table',th_list,td_list);
+        if(document.querySelector('#code1-table')){
+            document.querySelector('#code1-table-wraper').innerHTML = '';
+        }
+        document.querySelector('#code1-table-wraper').appendChild(table);
+    } else {
+        product_element_change();
+    }
+};
+
+
+function product_element_change(){
+    document.querySelector('#code1-table-wraper').innerHTML = '';
+    product_selected = product_element.options[product_element.selectedIndex];
+    // 合选情况
+    if (region_selected.value !== '请选择地区' && product_selected.value !== '请选择商品'){
+        let td_list = data_filter_2(region_selected.value,'region',product_selected.value);
+        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+        let table = general_table('code1-table',th_list,td_list);
+        if(document.querySelector('#code1-table')){
+            document.querySelector('#code1-table-wraper').innerHTML = '';
+        }
+        document.querySelector('#code1-table-wraper').appendChild(table);
+    }else if(region_selected.value === '请选择地区' && product_selected.value === '请选择商品'){
+        document.querySelector('#code1-table-wraper').innerHTML = '';
+    }else if(region_selected.value === '请选择地区' && product_selected.value !== '请选择商品'){
+        // 单一选择框的情况
+        let td_list = data_filter_1(product_selected.value,'product');
+        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+        let table = general_table('code1-table',th_list,td_list);
+        if(document.querySelector('#code1-table')){
+            document.querySelector('#code1-table-wraper').innerHTML = '';
+        }
+        document.querySelector('#code1-table-wraper').appendChild(table);
+    } else {
+        region_element_change();
+    }
+}
+
 
 // 一维数据筛选
 function data_filter_1(attr,key){
@@ -77,125 +133,6 @@ function general_table(table_id,th_list,td_list){
     }
 }
 
-
-
-// 编码一，分别监听两个输入，分别输出。编码二在编码一的基础上做一次存在判断，用来输出合集。
-
-// 监听地区选择器，并取得输入。
-var region_element = document.querySelector('#code1-region_select');
-var region_selected = region_element.options[region_element.selectedIndex];
-// 监听商品选择器，并取得输入。
-var product_element = document.querySelector('#code1-product_select');
-var product_selected = product_element.options[product_element.selectedIndex];
-
-region_element.addEventListener('change',region_element_change);
-function region_element_change(){
-    region_selected = region_element.options[region_element.selectedIndex];
-    // 判断选择框的选取情况，分别对应单一选取，均选取，均未选取。
-    if (region_selected.value !== '请选择地区' && product_selected.value !== '请选择商品'){
-        let td_list = data_filter_2(region_selected.value,'region',product_selected.value);
-        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
-        let table = general_table('code1-table',th_list,td_list);
-        if(document.querySelector('#code1-table')){
-            document.querySelector('#code1-table-wraper').removeChild(document.querySelector('#code1-table'));
-        }
-        document.querySelector('#code1-table-wraper').appendChild(table);
-    } else if(region_selected.value === '请选择地区' && product_selected.value === '请选择商品'){
-        document.querySelector('#code1-table-wraper').innerHTML = '';
-    } else if(region_selected.value !== '请选择地区' && product_selected.value === '请选择商品') {
-        // 单一选择框的情况
-        let td_list = data_filter_1(region_selected.value,'region');
-        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
-        let table = general_table('code1-table',th_list,td_list);
-        if(document.querySelector('#code1-table')){
-            document.querySelector('#code1-table-wraper').removeChild(document.querySelector('#code1-table'));
-        }
-        document.querySelector('#code1-table-wraper').appendChild(table);
-    } else {
-        product_element_change();
-    }
-};
-
-product_element.addEventListener('change',product_element_change);
-function product_element_change(){
-    product_selected = product_element.options[product_element.selectedIndex];
-    // 合选情况
-    if (region_selected.value !== '请选择地区' && product_selected.value !== '请选择商品'){
-        let td_list = data_filter_2(region_selected.value,'region',product_selected.value);
-        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
-        let table = general_table('code1-table',th_list,td_list);
-        if(document.querySelector('#code1-table')){
-            document.querySelector('#code1-table-wraper').removeChild(document.querySelector('#code1-table'));
-        }
-        document.querySelector('#code1-table-wraper').appendChild(table);
-    }else if(region_selected.value === '请选择地区' && product_selected.value === '请选择商品'){
-        document.querySelector('#code1-table-wraper').innerHTML = '';
-    }else if(region_selected.value === '请选择地区' && product_selected.value !== '请选择商品'){
-        // 单一选择框的情况
-        let td_list = data_filter_1(product_selected.value,'product');
-        let th_list = ['商品','地区','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
-        let table = general_table('code1-table',th_list,td_list);
-        if(document.querySelector('#code1-table')){
-            document.querySelector('#code1-table-wraper').removeChild(document.querySelector('#code1-table'));
-        }
-        document.querySelector('#code1-table-wraper').appendChild(table);
-    } else {
-        region_element_change();
-    }
-}
-
-// 编码二
-// 思路
-// 第一步是新建复选框
-// 第二步是监听复选框，在完成其内部逻辑后，返回所选值和当前复选框的ID
-// 第三步是根据所选值进行渲染
-
-
-// 在ID 为 code2 的容器中，建立复选框容器
-document.getElementById('code2-wrapper').appendChild(general_wrapper_item('wrapper-region',['华北','华东','华南']));
-document.getElementById('code2-wrapper').appendChild(general_wrapper_item('wrapper-product',['手机','笔记本','智能音箱']));
-
-let wrapper_region_values = {};
-let wrapper_product_values = {};
-// 监听选择框,当点击checkbox时，返回当前复选框的状态
-var wrapper_region = document.getElementById('wrapper-region');
-wrapper_region.addEventListener('click',function(event) {
-    event = event || window.event;
-    let srcElement = event.target || event.srcElement;
-    if(srcElement.getAttribute('type')) {
-        if (srcElement.getAttribute('type') === 'checkbox'){
-            let state = get_choose_state('wrapper-region');
-            state['srcElement'] = srcElement;
-            // 状态获取后开始复选框内部逻辑处理
-            wrapper_region_values['wrapper_id'] = multiple_wrapper_logic(state).id;
-            wrapper_region_values['data'] = multiple_wrapper_logic(state).okValue;
-            let data = [wrapper_region_values,wrapper_product_values]
-            // 开始渲染
-            //
-            rander_data(data)
-
-        }
-    }
-},false);
-
-var wrapper_product = document.getElementById('wrapper-product');
-wrapper_product.addEventListener('click',function(event) {
-    event = event || window.event;
-    let srcElement = event.target || event.srcElement;
-    if(srcElement.getAttribute('type')) {
-        if (srcElement.getAttribute('type') === 'checkbox'){
-            let state = get_choose_state('wrapper-product');
-            state['srcElement'] = srcElement;
-            // 状态获取后开始复选框内部逻辑处理
-            wrapper_product_values['wrapper_id'] = multiple_wrapper_logic(state).id;
-            wrapper_product_values['data'] = multiple_wrapper_logic(state).okValue;
-            let data = [wrapper_region_values,wrapper_product_values]
-            // 开始渲染
-            //
-            rander_data(data)
-        }
-    }
-},false);
 
 
 // 建立复选选项，接受一个复选框的容器id和复选值，
@@ -342,9 +279,6 @@ function rander_data(data){
             document.getElementById('code2-result').innerHTML = '';
             document.getElementById('code2-result').appendChild(table);
         }
-
-
-
     }
 }
 
