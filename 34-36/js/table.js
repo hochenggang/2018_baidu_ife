@@ -10,6 +10,8 @@ function general_wrapper_item(wrapper_id, wrapper_item_list) {
     let input = document.createElement('input');
     input.setAttribute('type', 'checkbox');
     input.setAttribute('value', '全选');
+    //默认选中
+    input.checked = true;
     // lable 内的 span 标签用于美化选择器
     let span = document.createElement('span');
     span.setAttribute('class', 'mutiple-wrapper-input-cover');
@@ -26,9 +28,12 @@ function general_wrapper_item(wrapper_id, wrapper_item_list) {
         let input = document.createElement('input');
         input.setAttribute('type', 'checkbox');
         input.setAttribute('value', wrapper_item_list[i]);
+        //默认选中
+        input.checked = true;
         lable.appendChild(input);
         lable.appendChild(span);
         lable.appendChild(document.createTextNode(wrapper_item_list[i]));
+
         wrapper.appendChild(lable);
     }
     return wrapper
@@ -207,6 +212,7 @@ function general_table_senior(table_id, th_list, td_list) {
         for (var i = 0; i < td_list.length; i++) {
             // 初始化 tr 标签
             var tr_nomal = document.createElement('tr');
+            tr_nomal.setAttribute('data-type','tableValue');
             // 判断第一列合并
             for (var s = 0; s < td_list[i].length; s++) {
                 // 如果头部相同，不再写入第一列内容

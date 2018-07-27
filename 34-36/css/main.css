@@ -1,11 +1,10 @@
 body {
-    padding: 2%;
-
+    margin: 0%;
+    padding: 0%;
 }
 
 select {
     padding: 5px;
-
 }
 
 td,th {
@@ -17,56 +16,65 @@ td,th {
 table {
     border-collapse: collapse;
     border-spacing: 0px;
-    margin-top: 10px;
     width: 100%;
 
 }
 
-hr {
-    margin: 1% 0;
-}
 p {
     font-size: 1.2rem;
     font-weight: bold;
 }
-input[type="checkbox"] {
-    opacity: 0.9;
-}
-.mutiple-wrapper-lable {
-    position: relative;
-    padding: 5px;
-}
-.mutiple-wrapper-input-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+
+
 #pic {
-    margin: 1% auto;
+    display: flex;
+
+
 }
-#pic div{
-    display: inline-block;
-    width: 325px;
-    height: 240px;
-    margin: 0 5%;
+#bar-rander{
+    background-color: bisque;
+
+}
+
+#line-rander{
+    background-color: bisque;
 }
 
 svg {
     width: 100%;
     height: 100%;
 }
-rect {
-    fill:rgb(255, 104, 58);
-    /* stroke:pink;
-    stroke-width:5; */
+#svgBarBox{
+
+}
+.rect {
+    fill:rgb(36,147,110);
     fill-opacity: 1;
+    stroke-opacity: 1;
+    width: 2px;
+}
+.mainLine {
+    stroke: rgb(32,96,79);
+    stroke-width: 2;
+    stroke-opacity: 1;
+}
+.noteLine {
+    stroke: rgb(32,96,79);
+    stroke-width: .5;
     stroke-opacity: 1;
 }
 
-line {
-    stroke: pink;
-    stroke-width: 2;
-    stroke-opacity: 1;
+#mul-select-wrapper {
+    display: flex;
+
+    
+}
+.mutiple-wrapper {
+    width: 50%;
+    padding: 5px;
+
+    
+}
+#mul-select-table-rander {
+    background-color: bisque;
 }
