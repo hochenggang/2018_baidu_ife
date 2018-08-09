@@ -1,6 +1,3 @@
-// 何成刚 20180729
-// 数据对象化，允许筛选数据
-
 APP.chooseBoxData = {
     getChoose: function () {
         var chooseData;
@@ -28,15 +25,14 @@ APP.chooseBoxData = {
             return result
         }
     },
+
     logicCheck: function () {
         // 取得选择框状态
         var chooseData = APP.chooseBoxData.getChoose();
         // 进行逻辑判断
         check(chooseData.chooseDataRegion);
-        check(chooseData.chooseDataProduct)
+        check(chooseData.chooseDataProduct);
         function check(Data) {
-            // console.log(Data); 
-            // 判断全选
             // 所选是普通元素，全选按钮未勾选，且所有元素被选中，此时应勾选“全选按钮”
             if (Data.check[0] === false && Data.select.length === 3 && APP.chooseBoxClickTarget.value !== '全选') {
                 Data.element[0].checked = true;
@@ -47,9 +43,9 @@ APP.chooseBoxData = {
             }
             // 所选是全选按钮，全选按钮已勾选，且不是所有元素被选中，此时应选中全部按钮
             if (Data.check[0] === true && Data.select.length !== 3 && APP.chooseBoxClickTarget.value === '全选') {
-                Data.element[1].checked = true;
-                Data.element[2].checked = true;
-                Data.element[3].checked = true;
+                for (let i = 1; i < Data.element.length; i++) {
+                    Data.element[i].checked = true;
+                }
             }
             // 所选是普通按钮，全选按钮未勾选，被选中元素数量为0时，此时无法取消选中
             if (Data.check[0] === false && Data.select.length === 0 && APP.chooseBoxClickTarget.value !== '全选') {
@@ -57,13 +53,18 @@ APP.chooseBoxData = {
             }
             // 所选是全选按钮，全选按钮未勾选，且所有元素被选中，此时取消全部勾选
             if (Data.check[0] === false && Data.select.length === 3 && APP.chooseBoxClickTarget.value === '全选') {
-                Data.element[0].checked = false;
-                Data.element[1].checked = false;
-                Data.element[2].checked = false;
-                Data.element[3].checked = false;
+                for (let i = 0; i < Data.element.length; i++) {
+                    if (i === 1) {
+                        Data.element[i].checked = true;
+                    }else {
+                        Data.element[i].checked = false;
+                    }
+                    
+                }
             }
         }
     },
+
     getData: function () {
         var chooseData = APP.chooseBoxData.getChoose();
         var rList = chooseData.chooseDataRegion.select;
