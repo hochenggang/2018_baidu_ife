@@ -28,7 +28,7 @@ function flushByTr(event) {
     var tds = APP.tableMouseTarget.parentNode.querySelectorAll('[data-type=value]');
     for (let index = 0; index < tds.length; index++) {
         let element = tds[index];
-        data.push(element.innerHTML)
+        data.push(Number(element.innerHTML))
     }
     
     data = [{'sale':data}]
