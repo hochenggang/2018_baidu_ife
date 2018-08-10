@@ -83,11 +83,9 @@ APP.render = {
     },
 
     // 柱状图渲染
-    'bar': function () {
+    'bar': function (data) {
         var H = window.innerHeight;
         var W = (window.innerWidth * 0.95);
-        console.log(W, W / 2)
-        var data = APP.chooseBoxData.getData();
         var dataList = [];
         for (var i = 0; i < data.length; i++) {
             dataList.push(data[i].sale);
@@ -146,10 +144,9 @@ APP.render = {
         }
     },
     // 柱状图渲染
-    'line': function () {
+    'line': function (data) {
         var H = window.innerHeight;
         var W = (window.innerWidth * 0.95);
-        var data = APP.chooseBoxData.getData();
         var dataList = [];
         for (var i = 0; i < data.length; i++) {
             dataList.push(data[i].sale);
@@ -228,7 +225,7 @@ APP.render = {
 function findMaxOfList(lists) {
     let max = 0;
     for (let l = 0; l < lists.length; l++) {
-        var list = lists[l]
+        var list = lists[l];
         for (let i = 0; i < list.length; i++) {
             if (list[i] > max) {
                 max = list[i];
@@ -238,12 +235,4 @@ function findMaxOfList(lists) {
     // 加五以使绘图区不溢出
     return max + 5
 }
-
-// 初始化渲染
-APP.render.table();
-APP.render.bar();
-APP.render.line();
-APP.Style.flush();
-
-
 
