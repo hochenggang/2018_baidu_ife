@@ -1,6 +1,7 @@
 APP.render = {
-    // 表格渲染
+    // 颜色列表
     'colorList': ['#F03434', '#663399', '#913D88', '#446CB3', '#1F3A93', '#87D37C', '#1E824C', '#FABE58', '#95A5A6'],
+    // 表格渲染
     'table': function () {
         var data = APP.chooseBoxData.getData();
         var table = document.createElement('table');
@@ -20,7 +21,6 @@ APP.render = {
             tr.appendChild(th);
         }
         table.appendChild(tr);
-
         // 生成普通内容
         for (var i = 0; i < data.length; i++) {
             tr = document.createElement('tr');
@@ -143,7 +143,7 @@ APP.render = {
             return rect
         }
     },
-    // 柱状图渲染
+    // 折线图渲染
     'line': function (data) {
         var H = window.innerHeight;
         var W = (window.innerWidth * 0.95);

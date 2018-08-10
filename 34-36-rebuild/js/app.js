@@ -30,13 +30,13 @@ function flushByTr(event) {
         let element = tds[index];
         data.push(Number(element.innerHTML))
     }
-    
-    data = [{'sale':data}]
-    // 重置绘图区
-    document.querySelector('#render').innerHTML = '';
-    // 渲染图表
-    APP.render.bar(data);
-    APP.render.line(data);
+    // 判断来自表头的触发
+    if (data.length !== 12) {
+        console.log('表头事件，跳过渲染')
+    } else {
+        data = [{ 'sale': data }]
+        document.querySelector('#render').innerHTML = '';
+        APP.render.bar(data);
+        APP.render.line(data);
+    }
 }
-
-
