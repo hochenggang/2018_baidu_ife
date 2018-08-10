@@ -12,6 +12,7 @@ function Run(event) {
     document.querySelector('#render').innerHTML = '';
     // 渲染图表
     APP.render.bar();
+    APP.render.line();
     // 设置样式
     APP.Style.flush();
 }

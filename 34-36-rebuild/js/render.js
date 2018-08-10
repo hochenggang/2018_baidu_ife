@@ -85,8 +85,8 @@ APP.render = {
     // 柱状图渲染
     'bar': function () {
         var H = window.innerHeight;
-        var W = window.innerWidth - 20;
-        console.log(W,W/2)
+        var W = (window.innerWidth * 0.95);
+        console.log(W, W / 2)
         var data = APP.chooseBoxData.getData();
         var dataList = [];
         for (var i = 0; i < data.length; i++) {
@@ -94,8 +94,8 @@ APP.render = {
         }
         var maxNum = findMaxOfList(dataList);
         let bar = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        bar.style.width = W / 2;
-        bar.style.height = H / 2;
+        bar.style.width = W / 2 + 'px';
+        bar.style.height = H / 2 + 'px';
         // 建立坐标轴和指示器
         var boxarea = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         var xline = drawSvgLine('mainAreaLine', [0, H / 2], [W / 2, H / 2]);
@@ -148,7 +148,7 @@ APP.render = {
     // 柱状图渲染
     'line': function () {
         var H = window.innerHeight;
-        var W = window.innerWidth - 20;
+        var W = (window.innerWidth * 0.95);
         var data = APP.chooseBoxData.getData();
         var dataList = [];
         for (var i = 0; i < data.length; i++) {
@@ -162,14 +162,65 @@ APP.render = {
         line.setAttribute('height', H / 2);
         var ctx = line.getContext("2d");
 
+        // 绘制坐标轴
+        let Y = H / 2;
+        let X = W / 2;
+        let startCanv = [0, 0];
+        let endCanv = [0, Y];
+        let lineWidth = 2;
+        drawCanvasLine(ctx, lineWidth, startCanv, endCanv)
+
+        startCanv = [0, Y - 0];
+        endCanv = [X - 0, Y - 0];
+        lineWidth = 2;
+        drawCanvasLine(ctx, lineWidth, startCanv, endCanv)
 
 
+        for (var i = 0; i < dataList.length; i++) {
+            // 转换系数
+            var transferNum = (H / 2) / maxNum;
+            var columnsWidth = (W / 2) / 12;
+            // 计算一个数据列的宽度，减去8是为留出左右各4的列距
+            var list = dataList[i];
+            var color = APP.render.colorList[i];
+
+            let canvasData = [];
+            // 绘制点点
+            for (var ii = 0; ii < list.length; ii++) {
+                var startWidth = columnsWidth * ii + columnsWidth / 2;
+                var value = list[ii];
+                ctx.beginPath();
+                ctx.arc(startWidth, (H / 2) - (transferNum * value), 2, 0, 2 * Math.PI);
+                canvasData.push([startWidth, (H / 2) - (transferNum * value), color])
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+            // 绘制线条
+            for (let i = 0; i < canvasData.length; i++) {
+                if (i < canvasData.length - 1) {
+                    let x1 = canvasData[i][0]
+                    let y1 = canvasData[i][1]
+                    let x2 = canvasData[i + 1][0]
+                    let y2 = canvasData[i + 1][1]
+                    ctx.beginPath();
+                    ctx.lineWidth = "2";
+                    ctx.strokeStyle = canvasData[i][2];
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        function drawCanvasLine(ctx, lineWidth, startCanv, endCanv) {
+            ctx.beginPath();
+            ctx.lineWidth = lineWidth;
+            ctx.strokeStyle = '#000000';
+            ctx.moveTo(startCanv[0], startCanv[1]);
+            ctx.lineTo(endCanv[0], endCanv[1]);
+            ctx.stroke();
+        }
         document.querySelector('#render').appendChild(line);
-
-
-
-
-
     }
 }
 
@@ -184,7 +235,8 @@ function findMaxOfList(lists) {
             }
         }
     }
-    return max
+    // 加五以使绘图区不溢出
+    return max + 5
 }
 
 // 初始化渲染
