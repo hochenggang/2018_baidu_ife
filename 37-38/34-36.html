@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cmn-Hans-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>34-36</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+
+</head>
+
+<body>
+    <div id="render"></div>
+    <div id="chooseBox">
+        <div id="chooseBoxRegion" class="chooseBoxItem">
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="全选"> 全选
+            </label>
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="华北"> 华北
+            </label>
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="华东"> 华东
+            </label>
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="华南"> 华南
+            </label>
+        </div>
+        <div id="chooseBoxProduct" class="chooseBoxItem">
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="全选"> 全选
+            </label>
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="手机"> 手机
+            </label>
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="笔记本"> 笔记本
+            </label>
+            <label class="chooseBoxItemLbel">
+                <input type="checkbox" checked="checked" value="智能音箱"> 智能音箱
+            </label>
+        </div>
+    </div>
+    <div id="table"></div>
+
+    <script src="js/app.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/render.js"></script>
+    <script>
+        // 初始化渲染
+        var data = APP.chooseBoxData.getData();
+        APP.render.table();
+        APP.render.bar(data);
+        APP.render.line(data);
+        APP.Style.flush();
+    </script>
+
+
+</body>
+
+</html>

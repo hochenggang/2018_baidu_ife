@@ -1,0 +1,49 @@
+body {
+    margin: 1%;
+    padding: 0%;
+}
+td,th {
+    border: 1px solid #353535;
+    text-align: center;
+    padding: .25%;
+}
+#chooseBox {
+    margin: .5% 0%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+label {
+    margin: 0%;
+    font-size: 1rem;
+    height: 50%;
+
+}
+input {
+    margin: 0%;
+}
+#render {
+    
+}
+svg {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+canvas {
+    float: right;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+.mainAreaLine {
+    stroke: #000000;
+    stroke-width:2;
+}
