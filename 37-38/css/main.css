@@ -6,6 +6,7 @@ td,th {
     border: 1px solid #353535;
     text-align: center;
     padding: .25%;
+    position: relative;
 }
 #chooseBox {
     margin: .5% 0%;
@@ -46,4 +47,17 @@ canvas {
 .mainAreaLine {
     stroke: #000000;
     stroke-width:2;
+}
+[data-type=inputing] {
+    border: none;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 99%;
+    height: 90%;
+}
+[data-type=inputing]:focus {
+    border: none;
+    margin: none;
+    outline: none;
 }

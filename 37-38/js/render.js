@@ -24,6 +24,8 @@ APP.render = {
         // 生成普通内容
         for (var i = 0; i < data.length; i++) {
             tr = document.createElement('tr');
+            tr.setAttribute('data-table-r', data[i].region);
+            tr.setAttribute('data-table-p', data[i].product);
             // 判断是否调整列序
             if (chooseData.chooseDataRegion.select.length === 1) {
                 td = document.createElement('td');
@@ -44,6 +46,7 @@ APP.render = {
             }
             for (var s = 0; s < data[i].sale.length; s++) {
                 td = document.createElement('td');
+                td.setAttribute('data-table-clomn', s);
                 td.setAttribute('data-type', 'value');
                 td.setAttribute('style', 'color:' + APP.render.colorList[i]);
                 td.appendChild(document.createTextNode(data[i].sale[s]));
@@ -52,7 +55,7 @@ APP.render = {
             table.appendChild(tr);
         }
         if (document.querySelector('#table table')) {
-            document.querySelector('#table').removeChild(document.querySelector('#table table'));
+            document.querySelector('#table').innerHTML = '';
         }
         // 渲染表格
         document.querySelector('#table').appendChild(table);
