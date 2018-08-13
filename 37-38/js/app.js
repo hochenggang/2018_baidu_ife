@@ -56,42 +56,16 @@ function change(event) {
     if (data.length !== 12) {
         console.log('表头事件，跳过渲染')
     } else {
-        var value = target.innerHTML;
-        target.innerHTML = '';
-        var inp = document.createElement('input');
-        inp.setAttribute('value', value);
-        inp.setAttribute('data-type', 'inputing');
-        target.appendChild(inp);
-        target.querySelector('input').focus();
-        inp.addEventListener('blur', blur);
-        function blur() {
-            let value = this.value;
-            if (!isNaN(value)) {
-                APP.render.table();
-                let index = this.parentNode.getAttribute('data-table-clomn');
-                let r = this.parentNode.parentNode.getAttribute('data-table-r');
-                let p = this.parentNode.parentNode.getAttribute('data-table-p');
-                for (let i = 0; i < APP.chooseBoxData.srcData.length; i++) {
-                    if (APP.chooseBoxData.srcData[i]['region'] === r && APP.chooseBoxData.srcData[i]['product'] === p) {
-                        APP.chooseBoxData.srcData[i].sale[index] = value;
-                    }
-                }
-                localStorage.setItem('srcData', JSON.stringify(APP.chooseBoxData.srcData));
-                APP.render.table();
-                document.querySelector('#render').innerHTML = '';
-                var data = APP.chooseBoxData.getData();
-                APP.render.bar(data);
-                APP.render.line(data);
-                APP.Style.flush();
-            } else {
-                APP.render.table();
-                alert('接受值类型为：数字')
-            }
-        };
-        inp.addEventListener('keydown', keydown);
-        function keydown(event) {
-            // 响应回车键被按下
-            if (event.keyCode === 13) {
+        if (target.getAttribute('data-type') === 'value') {
+            var value = target.innerHTML;
+            target.innerHTML = '';
+            var inp = document.createElement('input');
+            inp.setAttribute('value', value);
+            inp.setAttribute('data-type', 'inputing');
+            target.appendChild(inp);
+            target.querySelector('input').focus();
+            inp.addEventListener('blur', blur);
+            function blur() {
                 let value = this.value;
                 if (!isNaN(value)) {
                     APP.render.table();
@@ -113,6 +87,34 @@ function change(event) {
                 } else {
                     APP.render.table();
                     alert('接受值类型为：数字')
+                }
+            };
+            inp.addEventListener('keydown', keydown);
+            function keydown(event) {
+                // 响应回车键被按下
+                if (event.keyCode === 13) {
+                    let value = this.value;
+                    if (!isNaN(value)) {
+                        APP.render.table();
+                        let index = this.parentNode.getAttribute('data-table-clomn');
+                        let r = this.parentNode.parentNode.getAttribute('data-table-r');
+                        let p = this.parentNode.parentNode.getAttribute('data-table-p');
+                        for (let i = 0; i < APP.chooseBoxData.srcData.length; i++) {
+                            if (APP.chooseBoxData.srcData[i]['region'] === r && APP.chooseBoxData.srcData[i]['product'] === p) {
+                                APP.chooseBoxData.srcData[i].sale[index] = value;
+                            }
+                        }
+                        localStorage.setItem('srcData', JSON.stringify(APP.chooseBoxData.srcData));
+                        APP.render.table();
+                        document.querySelector('#render').innerHTML = '';
+                        var data = APP.chooseBoxData.getData();
+                        APP.render.bar(data);
+                        APP.render.line(data);
+                        APP.Style.flush();
+                    } else {
+                        APP.render.table();
+                        alert('接受值类型为：数字')
+                    }
                 }
             }
         }
