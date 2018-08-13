@@ -24,9 +24,9 @@ document.querySelector('#table').addEventListener('mouseover', flushByTr);
 function flushByTr(event) {
     // 储存点击事件
     var e = event || window.event;
-    APP.tableMouseTarget = e.target || e.srcElement;
+    let src = e.target || e.srcElement;
     var data = []
-    var tds = APP.tableMouseTarget.parentNode.querySelectorAll('[data-type=value]');
+    var tds = src.parentNode.querySelectorAll('[data-type=value]');
     for (let index = 0; index < tds.length; index++) {
         let element = tds[index];
         data.push(Number(element.innerHTML))
@@ -44,11 +44,10 @@ function flushByTr(event) {
 
 document.querySelector('#table').addEventListener('dblclick', change);
 function change(event) {
-    // 储存点击事件
     var e = event || window.event;
-    var target = e.target || e.srcElement;
+    let target = e.target || e.srcElement;
     var data = []
-    var tds = APP.tableMouseTarget.parentNode.querySelectorAll('[data-type=value]');
+    var tds = target.parentNode.querySelectorAll('[data-type=value]');
     for (let index = 0; index < tds.length; index++) {
         let element = tds[index];
         data.push(Number(element.innerHTML))
@@ -67,27 +66,7 @@ function change(event) {
         inp.addEventListener('blur', blur);
         function blur() {
             let value = this.value;
-            APP.render.table();
-            let index = this.parentNode.getAttribute('data-table-clomn');
-            let r = this.parentNode.parentNode.getAttribute('data-table-r');
-            let p = this.parentNode.parentNode.getAttribute('data-table-p');
-            for (let i = 0; i < APP.chooseBoxData.srcData.length; i++) {
-                if (APP.chooseBoxData.srcData[i]['region'] === r && APP.chooseBoxData.srcData[i]['product'] === p) {
-                    APP.chooseBoxData.srcData[i].sale[index] = value;
-                }
-            }
-            APP.render.table();
-            document.querySelector('#render').innerHTML = '';
-            var data = APP.chooseBoxData.getData();
-            APP.render.bar(data);
-            APP.render.line(data);
-            APP.Style.flush();
-        };
-        inp.addEventListener('keydown', keydown);
-        function keydown(event) {
-            // 响应回车键被按下
-            if (event.keyCode === 13) {
-                let value = this.value;
+            if (!isNaN(value)) {
                 APP.render.table();
                 let index = this.parentNode.getAttribute('data-table-clomn');
                 let r = this.parentNode.parentNode.getAttribute('data-table-r');
@@ -97,13 +76,46 @@ function change(event) {
                         APP.chooseBoxData.srcData[i].sale[index] = value;
                     }
                 }
+                localStorage.setItem('srcData', JSON.stringify(APP.chooseBoxData.srcData));
                 APP.render.table();
                 document.querySelector('#render').innerHTML = '';
                 var data = APP.chooseBoxData.getData();
                 APP.render.bar(data);
                 APP.render.line(data);
                 APP.Style.flush();
+            } else {
+                APP.render.table();
+                alert('接受值类型为：数字')
+            }
+        };
+        inp.addEventListener('keydown', keydown);
+        function keydown(event) {
+            // 响应回车键被按下
+            if (event.keyCode === 13) {
+                let value = this.value;
+                if (!isNaN(value)) {
+                    APP.render.table();
+                    let index = this.parentNode.getAttribute('data-table-clomn');
+                    let r = this.parentNode.parentNode.getAttribute('data-table-r');
+                    let p = this.parentNode.parentNode.getAttribute('data-table-p');
+                    for (let i = 0; i < APP.chooseBoxData.srcData.length; i++) {
+                        if (APP.chooseBoxData.srcData[i]['region'] === r && APP.chooseBoxData.srcData[i]['product'] === p) {
+                            APP.chooseBoxData.srcData[i].sale[index] = value;
+                        }
+                    }
+                    localStorage.setItem('srcData', JSON.stringify(APP.chooseBoxData.srcData));
+                    APP.render.table();
+                    document.querySelector('#render').innerHTML = '';
+                    var data = APP.chooseBoxData.getData();
+                    APP.render.bar(data);
+                    APP.render.line(data);
+                    APP.Style.flush();
+                } else {
+                    APP.render.table();
+                    alert('接受值类型为：数字')
+                }
             }
         }
     }
 }
+console.log(!isNaN())

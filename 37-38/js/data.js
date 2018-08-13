@@ -141,3 +141,6 @@ APP.chooseBoxData = {
         sale: [10, 40, 10, 6, 5, 6, 8, 6, 6, 6, 7, 26]
     }]
 };
+if (localStorage.getItem('srcData')){
+    APP.chooseBoxData.srcData = JSON.parse(localStorage.getItem('srcData'));
+}
