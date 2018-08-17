@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cmn-Hans-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>39-41</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+
+</head>
+
+<body>
+    <div id="buttonGroup">
+        <button id="a">A</button>
+        <button id="b">B</button>
+        <button id="c">C</button>
+    </div>
+    <div id="cont"></div>
+    <script>
+
+        var btns = document.querySelector('#buttonGroup');
+        var cont = document.querySelector('#cont');
+        btns.onclick = function (event) {
+            if (event.target.tagName === 'BUTTON') {
+                let btnValue = event.target.get || event.srcElement.innerHTML;
+                console.log(btnValue)
+                cont.innerHTML = btnValue;
+                location.hash = 'cont:'+btnValue;
+            }
+        }
+        console.log()
+        if ((location.hash).length>1){
+            cont.innerHTML = location.hash;
+        }
+
+
+    </script>
+</body>
+
+</html>
