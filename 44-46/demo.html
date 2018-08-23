@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- from:https://www.cnblogs.com/cangowu/p/5062130.html -->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!--<script>
+    var Singleton = (function(){
+        var instantiated;
+        function init(){
+            /*这里定义单例代码*/
+            return{
+                publicMethod:function(){
+                    console.log("hello world");
+                },
+                publicProperty:"test"
+            };
+        }
+
+        return{
+            getInstance:function(){
+                if(!instantiated){
+                    instantiated = init();
+                }
+                return instantiated;
+            }
+        }
+    })();
+
+    Singleton.getInstance().publicMethod();
+</script>-->
+
+<script>
+     /*1.独立的对象 建2个一个xiaowang一个xiaoli
+     2.让xiaoli跟xiaowang通过门铃进行通信
+     3.先看一下xiaowang家有没有门 如果油门直接通过门铃通讯didi如果没有门先建门
+     4.两个单例之间看是通讯*/
+    var xiaowang = (function(argument){
+        var men;
+        var xiaowangjia = function(msg){
+            this.menling = msg;
+        }
+        var info = {
+            sendMessage:function(msg){
+                console.log(men)
+                if(!men){
+                    men = new xiaowangjia(msg);
+                }
+                return men;
+            },
+            abc:function(){
+                return 123;
+            }
+        };
+        return info;
+    })();
+    var xiaoli = {
+        callXiaowang:function(msg){
+            var _xw = xiaowang.sendMessage(msg);
+            alert(_xw.menling);
+            console.log(_xw.menling);
+            _xw = null;//等待垃圾回收
+
+            var abc = xiaowang.abc();
+            console.log(abc);
+        }
+    }
+    xiaoli.callXiaowang("didi");
+    xiaoli.callXiaowang('dasd');
+
+    
+</script>
+</body>
+</html>
